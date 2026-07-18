@@ -1,10 +1,10 @@
 # Systems Analyst Notes — Companion Artifacts
 
-This repo holds the actual system artifacts behind the "Systems Analyst
-Notes" series: an AI Documentation Framework (ADF) built for a fintech
-startup working cross-border payments across the US, Mexico, Brazil, and
-Colombia. Everything here is a working artifact, not a repackaged framework —
-templates, specs, and matrices designed for that specific system.
+This repo holds the companion artifacts behind the "Systems Analyst Notes"
+series: templated versions of an AI Documentation Framework (ADF), built
+around the kind of system a cross-border fintech company runs on. Each
+artifact is a working template, shaped the way a real document for that
+kind of system would be, then generalized enough to reuse.
 
 ## Structure
 
@@ -23,7 +23,7 @@ security silo nobody checks during requirement work.
 which market: EU AI Act, NIST AI RMF, ISO/IEC 42001, LGPD, LFPDPPP, Law
 1581/2012, and how they overlap.
 
-**Prompt Library** — prompts proven out on real analytical tasks, kept as
+**Prompt Library** — prompts shaped for common analytical tasks, kept as
 reusable references instead of rewritten from scratch every time.
 
 **Templates & Quality Rules** — the actual artifact templates (BRD, SRS, ADR,
@@ -47,4 +47,4 @@ formatting convention.
 
 ---
 
-*Companion repo to the "Systems Analyst Notes. Startup Experience" series on LinkedIn.*
+*Companion repo to the "Systems Analyst Notes" series on LinkedIn.*
