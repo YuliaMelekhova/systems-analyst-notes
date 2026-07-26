@@ -35,6 +35,7 @@ decide when a document is ready for review.
 | Post | Title | Phase | File |
 |---|---|---|---|
 | 7 | Documentation Is Organizational Memory | 2 — The Knowledge Chapter | this README |
+| 10 | Six Signs Tribal Knowledge Is Becoming Dangerous | Phase 2 | [artifacts/post-10-tribal-knowledge-signs.md](artifacts/post-10-tribal-knowledge-signs.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
