@@ -2,7 +2,7 @@
 Post: 10
 Title: Six Signs Tribal Knowledge Is Becoming Dangerous
 Phase: 2 — The Knowledge Chapter
-LinkedIn: [link once published]
+LinkedIn: https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-knowledgemanagement-fintech-share-7487021286582403072-yWuY/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABW2QzcBN4fI21bG0ls7u2nHq-ooXTFxjEU
 -->
 
 # Six Signs Tribal Knowledge Is Becoming Dangerous
