@@ -36,7 +36,7 @@ decide when a document is ready for review.
 |---|---|---|---|
 | 7 | Documentation Is Organizational Memory | 2 — The Knowledge Chapter | this README |
 | 10 | Six Signs Tribal Knowledge Is Becoming Dangerous | Phase 2 | [artifacts/post-10-tribal-knowledge-signs.md](artifacts/post-10-tribal-knowledge-signs.md) |
-| 12 | Knowledge Graph — Mapping How Information Actually Connects | Phase 2 | [artifacts/post-12-knowledge-graph.md](artifacts/post-12-knowledge-graph.md) |
+| 12 | Knowledge Graph — Mapping How Information Actually Connects | Phase 2 | [artifacts/post-12-knowledge-graph.mmd](artifacts/post-12-knowledge-graph.mmd) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
