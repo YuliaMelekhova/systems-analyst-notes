@@ -38,7 +38,7 @@ decide when a document is ready for review.
 | 10 | Six Signs Tribal Knowledge Is Becoming Dangerous | Phase 2 The Knowledge Chapter | [artifacts/post-10-tribal-knowledge-signs.md](artifacts/post-10-tribal-knowledge-signs.md) |
 | 12 | Knowledge Graph — Mapping How Information Actually Connects | Phase 2 The Knowledge Chapter | [artifacts/post-12-knowledge-graph.md](artifacts/post-12-knowledge-graph.md) |
 | 14 | 3 Questions Before Writing Any Requirement | Phase 3 Building the Foundation | [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) |
-| 16 | Context Diagram — Drawing the Boundary First | 3 — Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
+| 16 | Context Diagram — Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
