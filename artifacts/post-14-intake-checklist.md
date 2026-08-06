@@ -2,7 +2,7 @@
 Post: 14
 Title: 3 Questions I Ask Before Writing Any Requirement
 Phase: 3 — Building the Foundation
-LinkedIn: [link once published]
+LinkedIn: [https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-businessanalysis-requirements-share-7489594821527928832-bUqS/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABW2QzcBN4fI21bG0ls7u2nHq-ooXTFxjEU]
 -->
 
 # Requirement Intake Checklist
