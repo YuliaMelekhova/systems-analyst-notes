@@ -1,7 +1,7 @@
 <!--
 Post: 19
 Title: Mapping the Unhappy Path Before You Design the Happy One
-Phase: 3 — Building the Foundation
+Phase: 3 - Building the Foundation
 LinkedIn: [link once published]
 -->
 
@@ -9,7 +9,7 @@ LinkedIn: [link once published]
 
 **Series:** Systems Analyst Notes  
 **Post:** 19  
-**Phase:** 3 — Building the Foundation  
+**Phase:** 3 - Building the Foundation  
 **Author:** Yulia Melekhova  
 **Published:** 2026  
 
@@ -17,13 +17,13 @@ LinkedIn: [link once published]
 
 ## Purpose
 
-The happy path is what you design first. The unhappy paths are what you must document before the happy path is finalized. A requirement that maps only the happy path describes a system that works in testing. Unhappy paths are where the system actually fails — and in regulated environments, where the most expensive failures happen.
+The happy path is what you design first. The unhappy paths are what you must document before the happy path is finalized. A requirement that maps only the happy path describes a system that works in testing. Unhappy paths are where the system actually fails - and in regulated environments, where the most expensive failures happen.
 
 ---
 
 ## The Core Principle
 
-Map unhappy paths before writing the requirement — not as a post-processing step.
+Map unhappy paths before writing the requirement - not as a post-processing step.
 
 Every unhappy path has four components:
 
@@ -51,7 +51,7 @@ Occur when input data is missing, malformed, or below the quality threshold the 
 | Regulatory implication | Which compliance gate depends on this field |
 | Resolution path | Manual correction / automated enrichment / rejection with reason code |
 
-**Fintech example — ISO 20022 structured address:**  
+**Fintech example - ISO 20022 structured address:**  
 Trigger: `TwnNm` or `Ctry` absent from pacs.008 party fields.  
 System response: SWIFT CBPR+ rejects message.  
 Regulatory implication: Non-compliance with November 14, 2026 structured address mandate.  
@@ -72,7 +72,7 @@ Occur when a value crosses a regulatory or business threshold that changes the r
 | Obligation triggered | What the system must do once threshold is crossed |
 | Cross-jurisdiction check | Does the same transaction trigger a different threshold in another jurisdiction? |
 
-**Fintech example — FATF Travel Rule:**  
+**Fintech example - FATF Travel Rule:**  
 Trigger: Transaction amount exceeds $2,500 (US obligation).  
 Regulatory regime: FATF Travel Rule, FinCEN implementation.  
 Obligation triggered: Originator and beneficiary information must travel with the payment.  
@@ -93,9 +93,9 @@ Occur when a counterparty, identity, or instrument fails a compliance check.
 | Hold behavior | Duration, notification, escalation path |
 | Release condition | What evidence or approval releases the hold |
 
-**Fintech example — sanctions screening:**  
+**Fintech example - sanctions screening:**  
 Trigger: Beneficiary name matches OFAC SDN list.  
-Failure type: Hard block — payment cannot proceed.  
+Failure type: Hard block - payment cannot proceed.  
 Hold behavior: Automated hold initiated; compliance team notified within [X] minutes; payment placed in restricted queue.  
 Release condition: Compliance officer manual review with documented rationale. Audit log updated.
 
@@ -117,10 +117,10 @@ These do not resolve through technical design alone. They require a documented d
 | System behavior | What the system does when this conflict is triggered |
 | Audit record | What is logged to demonstrate compliance with the chosen resolution |
 
-**Fintech example — GDPR vs. FATF Travel Rule:**  
+**Fintech example - GDPR vs. FATF Travel Rule:**  
 Conflict: GDPR restricts transmission of personal data beyond the EU. FATF Travel Rule mandates transmission of originator and beneficiary data with the payment.  
 Jurisdictions: EU (GDPR) vs. FATF member states (Travel Rule).  
-Documented decision: [Requires explicit legal sign-off — do not default this to engineering.]  
+Documented decision: [Requires explicit legal sign-off - do not default this to engineering.]  
 System behavior: Payment flagged for manual compliance review if both obligations apply simultaneously.  
 Audit record: Compliance decision, reviewer identity, timestamp, rationale.
 
@@ -152,9 +152,9 @@ Before finalizing any cross-border payment requirement, check each of the follow
 
 ## Related Artifacts
 
-- `post-18-discovery-framework.md` — Step 4 of the discovery framework covers unhappy path discovery
-- `post-14-requirement-readiness-checklist.md` — Prerequisites before writing a requirement
+- `post-18-discovery-framework.md` - Step 4 of the discovery framework covers unhappy path discovery
+- `post-14-requirement-readiness-checklist.md` - Prerequisites before writing a requirement
 
 ---
 
-*Systems Analyst Notes · github.com/yuliapugacheva/systems-analyst-notes*
+*Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes*
