@@ -125,7 +125,7 @@ The purpose is not to produce a perfect ranking - it is to surface the assumptio
 ## Related Artifacts
 
 - [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) - Pre-checklist before writing any requirement
-- [post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) - Full unhappy path framework
+- [artifacts/post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) - Full unhappy path framework
 
 ---
 
