@@ -1,7 +1,7 @@
 <!--
 Post: 18
 Title: My 5-Step Discovery Framework
-Phase: 3 — Building the Foundation
+Phase: 3 - Building the Foundation
 LinkedIn: [link once published]
 -->
 
@@ -9,7 +9,7 @@ LinkedIn: [link once published]
 
 **Series:** Systems Analyst Notes  
 **Post:** 18  
-**Phase:** 3 — Building the Foundation  
+**Phase:** 3 - Building the Foundation  
 **Author:** Yulia Melekhova  
 **Published:** 2026  
 
@@ -21,9 +21,9 @@ Not every requirement earns the same depth of discovery. This framework includes
 
 ---
 
-## Step 0 — Triage Gate
+## Step 0 - Triage Gate
 
-Before discovery begins, classify the requirement by priority tier. A quick show of hands across the team is often enough. Formal estimation is not required here — the goal is to calibrate effort, not produce a project plan.
+Before discovery begins, classify the requirement by priority tier. A quick show of hands across the team is often enough. Formal estimation is not required here - the goal is to calibrate effort, not produce a project plan.
 
 | Tier | Label | Discovery depth |
 |------|-------|----------------|
@@ -36,11 +36,11 @@ When the triage phase reveals conflicting priorities or uncertain value, that is
 
 ---
 
-## Step 1 — Understand the Business Goal
+## Step 1 - Understand the Business Goal
 
 **Question:** What outcome does the business need?
 
-Not the feature — the result. The requirement exists to serve a goal. If you cannot write the success metric for that goal in one sentence, you have not found it yet.
+Not the feature - the result. The requirement exists to serve a goal. If you cannot write the success metric for that goal in one sentence, you have not found it yet.
 
 **Checklist:**
 - [ ] Can you state the desired business outcome in measurable terms?
@@ -49,7 +49,7 @@ Not the feature — the result. The requirement exists to serve a goal. If you c
 
 ---
 
-## Step 2 — Map the Context
+## Step 2 - Map the Context
 
 **Question:** Who initiates this, who is affected downstream, and what systems touch it?
 
@@ -63,7 +63,7 @@ Draw the boundary before writing a single requirement. The context diagram (syst
 
 ---
 
-## Step 3 — Identify Constraints
+## Step 3 - Identify Constraints
 
 **Question:** What cannot change, and what is fixed before the requirement is written?
 
@@ -77,7 +77,7 @@ Constraints that surface here cost nothing. Constraints discovered in UAT cost m
 
 ---
 
-## Step 4 — Discover the Unhappy Paths
+## Step 4 - Discover the Unhappy Paths
 
 **Question:** What fails, and what does the system do when it fails?
 
@@ -91,7 +91,7 @@ The happy path describes intended behavior. Unhappy paths describe what happens 
 
 ---
 
-## Step 5 — Show-Stopper Check
+## Step 5 - Show-Stopper Check
 
 **Question:** Does anything here block delivery or violate a hard constraint?
 
@@ -118,15 +118,15 @@ The triage gate (Step 0) may not produce a clear answer. When it reveals conflic
 | Hard deadline, revenue at risk | Cost-of-delay analysis |
 | Multi-stakeholder disagreement | Weighted scoring with explicit criteria |
 
-The purpose is not to produce a perfect ranking — it is to surface the assumptions behind conflicting priorities and name them explicitly before discovery effort is spent.
+The purpose is not to produce a perfect ranking - it is to surface the assumptions behind conflicting priorities and name them explicitly before discovery effort is spent.
 
 ---
 
 ## Related Artifacts
 
-- `post-14-requirement-readiness-checklist.md` — Pre-checklist before writing any requirement
-- `post-19-unhappy-path-mapping.md` — Full unhappy path framework
+- [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) - Pre-checklist before writing any requirement
+- [post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) - Full unhappy path framework
 
 ---
 
-*Systems Analyst Notes · github.com/yuliapugacheva/systems-analyst-notes*
+*Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes*
