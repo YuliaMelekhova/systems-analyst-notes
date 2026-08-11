@@ -1,4 +1,4 @@
-# Systems Analyst Notes — Companion Artifacts
+# Systems Analyst Notes - Companion Artifacts
 
 This repo holds the companion artifacts behind the "Systems Analyst Notes"
 series: templated versions of an AI Documentation Framework (ADF), built
@@ -10,23 +10,23 @@ kind of system would be, then generalized enough to reuse.
 
 The framework has five branches.
 
-**Knowledge Packs** — reference material on the standards this system
+**Knowledge Packs** - reference material on the standards this system
 touches: BABOK, OpenAPI, ISO 20022, Open Banking Standards, RFC 9110 and
 related RFCs, Microsoft Manual of Style. Each pack is written up once and
 reused across every relevant requirement instead of re-researched each time.
 
-**STRIDE Threat Modeling** — threat modeling artifacts cross-linked to the
+**STRIDE Threat Modeling** - threat modeling artifacts cross-linked to the
 requirements and API specs they apply to, instead of sitting in a separate
 security silo nobody checks during requirement work.
 
-**Governance Matrix** — a mapping of which regulatory framework applies in
+**Governance Matrix** - a mapping of which regulatory framework applies in
 which market: EU AI Act, NIST AI RMF, ISO/IEC 42001, LGPD, LFPDPPP, Law
 1581/2012, and how they overlap.
 
-**Prompt Library** — prompts shaped for common analytical tasks, kept as
+**Prompt Library** - prompts shaped for common analytical tasks, kept as
 reusable references instead of rewritten from scratch every time.
 
-**Templates & Quality Rules** — the actual artifact templates (BRD, SRS, ADR,
+**Templates & Quality Rules** - the actual artifact templates (BRD, SRS, ADR,
 API contracts, decision tables) plus the naming and readiness rules that
 decide when a document is ready for review.
 
@@ -36,9 +36,11 @@ decide when a document is ready for review.
 |---|---|---|---|
 | 7 | Documentation Is Organizational Memory | Phase 2 The Knowledge Chapter | this README |
 | 10 | Six Signs Tribal Knowledge Is Becoming Dangerous | Phase 2 The Knowledge Chapter | [artifacts/post-10-tribal-knowledge-signs.md](artifacts/post-10-tribal-knowledge-signs.md) |
-| 12 | Knowledge Graph — Mapping How Information Actually Connects | Phase 2 The Knowledge Chapter | [artifacts/post-12-knowledge-graph.md](artifacts/post-12-knowledge-graph.md) |
+| 12 | Knowledge Graph - Mapping How Information Actually Connects | Phase 2 The Knowledge Chapter | [artifacts/post-12-knowledge-graph.md](artifacts/post-12-knowledge-graph.md) |
 | 14 | 3 Questions Before Writing Any Requirement | Phase 3 Building the Foundation | [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) |
-| 16 | Context Diagram — Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
+| 16 | Context Diagram - Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
+| 18 | My 5-Step Discovery Framework | Phase 3 Building the Foundation | [post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) |
+| 19 | Mapping the Unhappy Path Before You Design the Happy One | Phase 3 Building the Foundation | [post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
