@@ -39,8 +39,8 @@ decide when a document is ready for review.
 | 12 | Knowledge Graph - Mapping How Information Actually Connects | Phase 2 The Knowledge Chapter | [artifacts/post-12-knowledge-graph.md](artifacts/post-12-knowledge-graph.md) |
 | 14 | 3 Questions Before Writing Any Requirement | Phase 3 Building the Foundation | [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) |
 | 16 | Context Diagram - Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
-| 18 | My 5-Step Discovery Framework | Phase 3 Building the Foundation | [post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) |
-| 19 | Mapping the Unhappy Path Before You Design the Happy One | Phase 3 Building the Foundation | [post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) |
+| 18 | My 5-Step Discovery Framework | Phase 3 Building the Foundation | [artifacts/post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) |
+| 19 | Mapping the Unhappy Path Before You Design the Happy One | Phase 3 Building the Foundation | [artifacts/post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
