@@ -152,7 +152,7 @@ Before finalizing any cross-border payment requirement, check each of the follow
 
 ## Related Artifacts
 
-- [post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) - Step 4 of the discovery framework covers unhappy path discovery
+- [artifacts/post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) - Step 4 of the discovery framework covers unhappy path discovery
 - [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) - Prerequisites before writing a requirement
 
 ---
