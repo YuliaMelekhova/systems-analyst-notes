@@ -28,8 +28,8 @@ Before discovery begins, classify the requirement by priority tier. A quick show
 | Tier | Label | Discovery depth |
 |------|-------|----------------|
 | 1 | Critical | Full 5-step discovery |
-| 2 | Important | Steps 1–4, abbreviated Step 5 |
-| 3 | Nice-to-have | Steps 1–2 only |
+| 2 | Important | Steps 1-4, abbreviated Step 5 |
+| 3 | Nice-to-have | Steps 1-2 only |
 | 4 | Not now | Document and defer |
 
 When the triage phase reveals conflicting priorities or uncertain value, that is a signal to slow down and add a prioritization exercise. The scope can range from a quick MoSCoW sort to a full cost-of-delay analysis, depending on how much is known about business impact.
