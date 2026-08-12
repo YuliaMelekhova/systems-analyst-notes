@@ -2,14 +2,14 @@
 Post: 18
 Title: My 5-Step Discovery Framework
 Phase: 3 - Building the Foundation
-LinkedIn: [link once published]
+LinkedIn: https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-requirementsdiscovery-baframework-share-7492128085102809088-XosY/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABW2QzcBN4fI21bG0ls7u2nHq-ooXTFxjEU
 -->
 
 # 5-Step Discovery Framework
 
 **Series:** Systems Analyst Notes  
 **Post:** 18  
-**Phase:** 3 - Building the Foundation  
+**Phase:** 3 Building the Foundation  
 **Author:** Yulia Melekhova  
 **Published:** 2026  
 
@@ -129,4 +129,6 @@ The purpose is not to produce a perfect ranking - it is to surface the assumptio
 
 ---
 
-*Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes*
+Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes
+
+LinkedIn · https://www.linkedin.com/in/yuliamelekhova
