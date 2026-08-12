@@ -2,7 +2,7 @@
 Post: 12
 Title: Knowledge Graph — Mapping How Information Actually Connects
 Phase: 2 — The Knowledge Chapter
-LinkedIn: [link once published]
+LinkedIn: [(https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-knowledgemanagement-fintech-activity-7488722623741231104-nh_6?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABW2QzcBN4fI21bG0ls7u2nHq-ooXTFxjEU)]
 -->
 
 # Knowledge Graph — Payment Domain
