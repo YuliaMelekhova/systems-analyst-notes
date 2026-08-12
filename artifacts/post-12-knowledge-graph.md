@@ -94,6 +94,6 @@ The graph earns its place by making the dependency chain visible before a change
 
 ---
 
-Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes
+Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
 
 LinkedIn · https://www.linkedin.com/in/yuliamelekhova
