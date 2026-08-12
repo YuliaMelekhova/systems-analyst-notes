@@ -51,10 +51,9 @@ matching the post number in the LinkedIn series. See `github_repo_guide.md`
 (kept outside this repo, in the content project) for the full naming and
 formatting convention.
 
-## License
+## License 
 
 [CC BY 4.0](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/LICENSE). Everything here is written to be taken and adapted, with attribution.
 ---
-
 *Companion repo to the "Systems Analyst Notes" series on LinkedIn.*
 *https://www.linkedin.com/in/yuliamelekhova/*
