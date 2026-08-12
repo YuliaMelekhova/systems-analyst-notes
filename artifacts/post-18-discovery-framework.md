@@ -124,11 +124,13 @@ The purpose is not to produce a perfect ranking - it is to surface the assumptio
 
 ## Related Artifacts
 
-- [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) - Pre-checklist before writing any requirement
-- [artifacts/post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) - Full unhappy path framework
+* [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) - The pre-checklist that decides whether discovery is worth starting
+* [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) - The full framework behind Step 4
+* [templates-quality-rules/readiness-rules.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/readiness-rules.md) - The gates that decide whether the discovery output can go to review
 
 ---
 
-Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
+Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
 
 LinkedIn · https://www.linkedin.com/in/yuliamelekhova
+
