@@ -1,9 +1,9 @@
 # Repository Guide
 
-Series: Systems Analyst Notes
-Scope: Repository
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Scope:** Repository  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
@@ -86,11 +86,11 @@ Post artifact:
 ```markdown
 # Unhappy Path Mapping Framework
 
-Series: Systems Analyst Notes
-Post: 19
-Phase: 3 Building the Foundation
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Post:** 19  
+**Phase:** 3 Building the Foundation  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
@@ -102,10 +102,10 @@ Branch reference:
 ```markdown
 # ISO 20022 CBPR+ Structured Address Knowledge Pack
 
-Series: Systems Analyst Notes
-Branch: Knowledge Packs
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Branch:** Knowledge Packs  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
@@ -113,6 +113,24 @@ One or two sentences on what this artifact does and when to reach for it.
 ```
 
 `Purpose` states what someone does with the file. It is not a summary of the post.
+
+### The header renders line by line
+
+Each metadata line ends with **two trailing spaces**. That is the Markdown hard line break. Without it, consecutive lines collapse into one paragraph and the header renders as a single run of text.
+
+```
+**Series:** Systems Analyst Notes··
+**Post:** 19··
+**Phase:** 3 Building the Foundation··
+**Author:** Yulia Melekhova··
+**Published:** 2026
+```
+
+The `·` marks stand for spaces and are not typed. The last line takes no trailing spaces, since a blank line follows it anyway.
+
+Field labels are bold, values are plain. A single newline is not enough on its own, and this is the one formatting rule in the repository that fails silently: the file looks correct in an editor and renders wrong on GitHub.
+
+Trailing whitespace is invisible, and some editors strip it on save. Check the rendered preview before committing rather than trusting the source view.
 
 Post artifacts carry one HTML comment above the H1 holding the live post URL, added empty at commit and filled once the post is live:
 
