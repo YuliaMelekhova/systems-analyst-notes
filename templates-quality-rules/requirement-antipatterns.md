@@ -1,9 +1,9 @@
 # Requirement and ADR Antipatterns
 
-Series: Systems Analyst Notes
-Branch: Templates and Quality Rules
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Branch:** Templates and Quality Rules  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
