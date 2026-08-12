@@ -152,11 +152,15 @@ Before finalizing any cross-border payment requirement, check each of the follow
 
 ## Related Artifacts
 
-- [artifacts/post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) - Step 4 of the discovery framework covers unhappy path discovery
-- [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) - Prerequisites before writing a requirement
+* [artifacts/post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) - Step 4 of the discovery framework covers unhappy path discovery
+* [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) - Prerequisites before writing a requirement
+* [knowledge-packs/iso-20022-cbpr-plus.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/iso-20022-cbpr-plus.md) - The field rules behind the structured address line in the compliance checklist
+* [stride-threat-modeling/payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) - Every threat there produces an unhappy path that needs a specified response
+* [templates-quality-rules/requirement-antipatterns.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/requirement-antipatterns.md) - Success-only specification, which is this framework's absence seen from the review side
 
 ---
 
-Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
+Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
 
 LinkedIn · https://www.linkedin.com/in/yuliamelekhova
+
