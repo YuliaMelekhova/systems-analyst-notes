@@ -1,9 +1,9 @@
 # Cross-Border Payments Glossary
 
-Series: Systems Analyst Notes
-Branch: Knowledge Packs
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Branch:** Knowledge Packs  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
