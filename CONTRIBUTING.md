@@ -1,9 +1,9 @@
 # What Gets Into This Repo
 
-Series: Systems Analyst Notes
-Scope: Repository
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Scope:** Repository  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
