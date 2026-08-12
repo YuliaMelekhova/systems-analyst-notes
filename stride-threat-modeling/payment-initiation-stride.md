@@ -1,9 +1,9 @@
 # STRIDE Threat Model: Cross-Border Payment Initiation
 
-Series: Systems Analyst Notes
-Branch: STRIDE Threat Modeling
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Branch:** STRIDE Threat Modeling  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
