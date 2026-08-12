@@ -129,6 +129,6 @@ The purpose is not to produce a perfect ranking - it is to surface the assumptio
 
 ---
 
-Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes
+Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
 
 LinkedIn · https://www.linkedin.com/in/yuliamelekhova
