@@ -126,6 +126,6 @@ The output of this checklist is a decision about which knowledge the company can
 
 ---
 
-Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes
+Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
 
 LinkedIn · https://www.linkedin.com/in/yuliamelekhova
