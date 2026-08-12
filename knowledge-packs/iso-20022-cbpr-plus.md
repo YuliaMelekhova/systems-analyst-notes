@@ -1,9 +1,9 @@
 # ISO 20022 CBPR+ Structured Address Knowledge Pack
 
-Series: Systems Analyst Notes
-Branch: Knowledge Packs
-Author: Yulia Melekhova
-Published: 2026
+**Series:** Systems Analyst Notes  
+**Branch:** Knowledge Packs  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
