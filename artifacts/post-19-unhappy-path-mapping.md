@@ -9,7 +9,7 @@ LinkedIn: [link once published]
 
 **Series:** Systems Analyst Notes  
 **Post:** 19  
-**Phase:** 3 - Building the Foundation  
+**Phase:** 3 Building the Foundation  
 **Author:** Yulia Melekhova  
 **Published:** 2026  
 
@@ -157,4 +157,6 @@ Before finalizing any cross-border payment requirement, check each of the follow
 
 ---
 
-*Systems Analyst Notes · github.com/yuliamelekhova/systems-analyst-notes*
+Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
+
+LinkedIn · https://www.linkedin.com/in/yuliamelekhova
