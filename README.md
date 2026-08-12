@@ -54,3 +54,4 @@ formatting convention.
 ---
 
 *Companion repo to the "Systems Analyst Notes" series on LinkedIn.*
+*https://www.linkedin.com/in/yuliamelekhova/*
