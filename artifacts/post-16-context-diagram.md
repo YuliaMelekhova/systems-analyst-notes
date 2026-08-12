@@ -2,7 +2,7 @@
 Post: 16
 Title: Context Diagram — Drawing the Boundary Before Anything Else
 Phase: 3 — Building the Foundation
-LinkedIn: [link once published]
+LinkedIn: https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-businessanalysis-systemdesign-activity-7491259322354552832-FOsT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABW2QzcBN4fI21bG0ls7u2nHq-ooXTFxjEU
 -->
 
 # Context Diagram — Payment Platform
