@@ -98,11 +98,13 @@ The context diagram almost always needs at least one revision after the first st
 ## Related Artifacts
 
 * [artifacts/post-12-knowledge-graph.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-12-knowledge-graph.md) - The same payment domain seen from the artifact layer instead of the system boundary
+* [stride-threat-modeling/payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) - What to do with the boundary once it is drawn, one threat at a time
 * [artifacts/post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) - The discovery work that produces the actors on this diagram
 * [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) - Uses the boundary to answer the dependency gate
 
 ---
 
-Systems Analyst Notes · [github.com/yuliamelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
+Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
 
 LinkedIn · https://www.linkedin.com/in/yuliamelekhova
+
