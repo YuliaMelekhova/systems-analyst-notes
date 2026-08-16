@@ -7,258 +7,162 @@
 
 ## Purpose
 
-The mechanical conventions every file here follows: folder structure, naming, header and footer blocks, formats and link style. Reach for it before adding a file, or when copying this structure for a documentation set elsewhere.
+Says where a file goes in this repository and what it is called. Reach for it before creating any new file, and reach for `anti-ai-artifacts.md` before writing anything inside one.
 
 ---
 
-## Structure
+## 0. Which file wins
+
+Three documents govern this repository, and they do not overlap by accident.
+
+| File | Governs | Authority |
+|---|---|---|
+| `anti-ai-writing.md` | LinkedIn post copy | Wins on voice and phrasing everywhere, including inside artifacts |
+| `anti-ai-artifacts.md` | What goes inside an artifact file: header block, body rules, footer, links, phase names, commit messages | Wins on anything about the contents of a file |
+| `repo-guide.md`, this file | Repository mechanics: folder layout, naming, file format per content type, weekly workflow | Wins on where a file goes and what it is called |
+| `visual-style-guide.md` | The image published with each post | Separate from the repo, listed here so nobody looks for it in the wrong place |
+
+Where this file previously described a header block, it was superseded. That section now points at `anti-ai-artifacts.md` rather than restating it, because two copies of a format rule drift apart and the drift is silent.
+
+This file is itself a repository-level file, which is why it opens with a `Scope: Repository` header block and closes with a footer block, and why it carries no em dashes. A governance document that breaks the rule it is documenting teaches the wrong habit faster than the rule teaches the right one.
+
+The copy of this file kept alongside the writing rules is named `github_repo_guide.md`. In the repository it is `repo-guide.md`. Same content, and the repository name is the one that matters, since that is the copy anyone opens.
+
+---
+
+## 1. Folder structure
 
 ```
 systems-analyst-notes/
-├── README.md                  index and five-branch overview
-├── CONTRIBUTING.md            what gets in and what does not
-├── repo-guide.md              this file
-├── artifacts/                 one file per numbered post
-│   └── README.md              index grouped by type and by task
+├── README.md                      ← root index (this IS the Post 7 artifact)
+├── CONTRIBUTING.md
+├── repo-guide.md
 ├── knowledge-packs/
+│   └── README.md                  ← folder index, no header or footer block
 ├── stride-threat-modeling/
+│   └── README.md
 ├── governance-matrix/
+│   └── README.md
 ├── prompt-library/
-└── templates-quality-rules/
+│   └── README.md
+├── templates-quality-rules/
+│   └── README.md
+└── artifacts/
+    ├── README.md                  ← task-route index, "which file for which job"
+    ├── post-10-tribal-knowledge-signs.md
+    ├── post-12-knowledge-graph.mmd
+    ├── post-14-intake-checklist.md
+    ├── post-16-context-diagram.mmd
+    ├── post-18-discovery-framework.md
+    ├── post-19-unhappy-path-mapping.md
+    ├── post-21-requirement-decomposition-template.md
+    ├── post-22-api-contract-template.yaml
+    ├── post-23-adr-template.yaml
+    └── post-24-changelog-template.md
 ```
 
-The five framework folders mirror the branches of the documentation framework described in the root README. `artifacts/` holds companion files for numbered posts in the series.
+Only files that actually exist are listed. An earlier version of this guide carried a projected list of thirty filenames reaching to Post 66, and every one of them was a guess that went stale as the plan moved. The forward-looking list lives in the master plan, in the `GITHUB COMPANION ARTIFACTS` section, which is the one place it can be maintained without duplication.
+
+The five top-level folders mirror the ADF branches from Post 7. They stay mostly empty at first, and they hold branch references rather than post artifacts. `artifacts/` is where the weekly output lands, one file or subfolder per `[GitHub]`-tagged post.
+
+### Four kinds of file live here
+
+`anti-ai-artifacts.md` defines these in full. The short version, because it decides where a file goes:
+
+* **Post artifact.** Lives in `artifacts/`, named `post-NN-slug.ext`, gets a root README row.
+* **Branch reference.** Lives in one of the five framework folders, named `descriptive-slug.ext` with no number, gets no root README row. It exists when a topic outlives the post that raised it.
+* **Repository-level file.** `README.md`, `CONTRIBUTING.md`, `repo-guide.md`, `artifacts/README.md`. Carries `Scope: Repository`.
+* **Folder index.** The `README.md` inside each framework folder. Navigation furniture, no header block, no footer block, and never a list of the files in its own folder.
 
 ---
 
-## Two Kinds of File
+## 2. Naming convention
 
-The distinction drives the header block, the naming rule and whether a root README row is needed.
+`post-NN-short-slug.ext`
 
-| | Post artifact | Branch reference |
+* `NN` is the two-digit post number, matching the master plan exactly.
+* `short-slug` is 2 to 5 words, lowercase, hyphen separated, taken from the post title.
+* An inserted post takes the preceding number plus a lowercase letter: `post-28a-mandated-change-register.md`. The plan and the artifact header write it uppercase, `28A`. Sorting holds because `28a` falls between `28` and `29`.
+* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-48-c4-diagrams/context.mmd`, `container.mmd`, `component.mmd`.
+
+No dates in filenames. The post number is the permanent identifier, and dates live in the README table only.
+
+A number is never reused and never renumbered. Published posts, artifact filenames and README rows all carry it, and none of those can be rewritten after the fact.
+
+---
+
+## 3. File format by artifact type
+
+| Content type | Extension | Example |
 |---|---|---|
-| Lives in | `artifacts/` | One of the five framework folders |
-| Named | `post-NN-slug.ext` | `descriptive-slug.ext` |
-| Header carries | `Post` and `Phase` | `Branch` |
-| Root README row | Yes | No |
-| Changes after publication | Corrections only | Updated as standards move |
+| Checklists, frameworks, specs, prose docs | `.md` | `post-18-discovery-framework.md` |
+| Diagrams (sequence, context, ER, knowledge graph, C4) | `.mmd` Mermaid source | `post-25-sequence-diagram.mmd` |
+| Matrices, decision tables, regulatory mappings | `.csv` | `post-53-regulatory-matrix.csv` |
+| API contracts, structured records, anything queryable | `.yaml` | `post-22-api-contract-template.yaml` |
+| Multi-part artifacts | folder of the above | `post-54-seven-techniques-password-reset/` |
 
-Repository-level files at the root use `Scope: Repository` in place of both, and follow the branch reference rules otherwise.
+Diagrams go in as Mermaid source rather than exported images. GitHub renders `.mmd` natively in the file preview, and the artifact stays editable instead of becoming a flattened picture.
 
----
+The `.yaml` row widened after Post 23. A structured record that a rule can validate or a query can reach belongs in YAML even when it reads like prose, because the format is what makes it more than a document. An ADR is the worked example: the same content as markdown can only be read.
 
-## Naming
-
-Post artifacts: `post-NN-short-slug.ext`
-
-* `NN` is the two-digit post number and is the permanent identifier.
-* `short-slug` is two to five words, lowercase, hyphen separated, drawn from the post title.
-* Multi-file artifacts get a folder with the same prefix, and the contents drop the prefix. For example `post-41-c4-diagrams/context.mmd`.
-
-Branch references: a descriptive slug with no number, since they are not tied to a post.
-
-No dates in file names, in either kind. Dates live in the README table and in the verification note inside a file.
+A `.csv` file cannot carry a readable footer, so it gets a sibling `post-NN-slug.notes.md` holding the header and footer instead.
 
 ---
 
-## Format by Content Type
+## 4. Header block
 
-| Content | Extension |
-|---|---|
-| Checklists, frameworks, specs, prose | `.md` |
-| Diagrams | `.mmd`, or a fenced Mermaid block inside a `.md` file |
-| Matrices, decision tables, regulatory mappings | `.csv` |
-| API contract skeletons | `.yaml` |
-| Multi-part artifacts | A folder of the above |
+Defined in `anti-ai-artifacts.md`, not here. Open that file before writing one.
 
-Diagrams ship as source rather than exported images, which keeps them editable and lets GitHub render them.
+Three things worth knowing before you get there, because each has caused a rework:
 
-One rendering detail worth knowing: GitHub renders Mermaid inside fenced code blocks in `.md` files reliably. A standalone `.mmd` file does not always preview. Where the diagram is the artifact and the preview matters, a `.md` wrapper is the safer choice. Inside the Mermaid source, `\n` in node labels and `direction TB` inside a subgraph both break rendering.
+1. The header is a **visible block**, not an HTML comment. The old comment form documented in this guide has been retired.
+2. Every metadata line except the last ends with **two trailing spaces**. Without them the block renders as one paragraph. This fails silently, and only the rendered preview shows it.
+3. The phase is written `4 APIs as Products`. Number, space, name. No hyphen, no colon, no dash between them.
 
----
+The phase itself is taken by counting the section a post sits in inside the master plan. The number range printed in a plan phase heading is a label rather than a source of truth, and it has drifted from the items below it before.
 
-## Header Block
-
-First thing in the file, plain text, no badges.
-
-Post artifact:
-
-```markdown
-# Unhappy Path Mapping Framework
-
-**Series:** Systems Analyst Notes  
-**Post:** 19  
-**Phase:** 3 Building the Foundation  
-**Author:** Yulia Melekhova  
-**Published:** 2026  
-
-## Purpose
-
-One or two sentences on what this artifact does and when to reach for it.
-```
-
-Branch reference:
-
-```markdown
-# ISO 20022 CBPR+ Structured Address Knowledge Pack
-
-**Series:** Systems Analyst Notes  
-**Branch:** Knowledge Packs  
-**Author:** Yulia Melekhova  
-**Published:** 2026  
-
-## Purpose
-
-One or two sentences on what this artifact does and when to reach for it.
-```
-
-`Purpose` states what someone does with the file. It is not a summary of the post.
-
-### The header renders line by line
-
-Each metadata line ends with **two trailing spaces**. That is the Markdown hard line break. Without it, consecutive lines collapse into one paragraph and the header renders as a single run of text.
-
-```
-**Series:** Systems Analyst Notes··
-**Post:** 19··
-**Phase:** 3 Building the Foundation··
-**Author:** Yulia Melekhova··
-**Published:** 2026
-```
-
-The `·` marks stand for spaces and are not typed. The last line takes no trailing spaces, since a blank line follows it anyway.
-
-Field labels are bold, values are plain. A single newline is not enough on its own, and this is the one formatting rule in the repository that fails silently: the file looks correct in an editor and renders wrong on GitHub.
-
-Trailing whitespace is invisible, and some editors strip it on save. Check the rendered preview before committing rather than trusting the source view.
-
-Post artifacts carry one HTML comment above the H1 holding the live post URL, added empty at commit and filled once the post is live:
-
-```markdown
-<!-- LinkedIn: https://www.linkedin.com/posts/... -->
-```
-
-Branch references have no post to link and skip the comment.
-
-`.yaml` and `.mmd` carry the same header in their own comment syntax, `#` and `%%`. A `.csv` gets a sibling `slug.notes.md` holding the header and footer, since links inside a CSV are unreadable.
+A separate one-line HTML comment above the H1 holds the live post URL. It is added empty at commit time and filled once the post goes live. Post artifacts only.
 
 ---
 
-## Phase Names
+## 5. Root README.md, the index
 
-One canonical form everywhere. Number, space, name. No hyphen, no colon between the number and the name.
+The root `README.md` is itself the Post 7 artifact. It has two jobs:
 
-* Phase 1 Arrival: Where Is the Truth?
-* Phase 2 The Knowledge Chapter
-* Phase 3 Building the Foundation
-* Phase 4 APIs as Products
-* Phase 5 Bringing AI Into the Workflow
-* Phase 6 AI Agents at Work
-* Phase 7 Process, Compliance and Fintech Reality
-* Phase 8 Scaling
-* Phase 9 Reflection
-* Phase 10 New Additions
+1. **State the five-branch structure**: Knowledge Packs, STRIDE Threat Modeling, Governance Matrix, Prompt Library, Templates and Quality Rules. One short paragraph per branch, what lives there conceptually.
+2. **List every published artifact** as a table: Post, Title, Phase, Artifact.
 
-The colon inside `Phase 1 Arrival: Where Is the Truth?` belongs to the phase title and stays.
+Update the table every time a `[GitHub]`-tagged post ships. Nothing else changes, since the five-branch section is written once and stays fixed.
+
+`artifacts/README.md` does a different job and needs its own update when a route changes. The root index answers what the series has published. The artifacts index answers which file to open for the task in hand.
+
+The folder name `templates-quality-rules/` uses a hyphen because folder names cannot carry spaces. Everywhere the branch is named in prose, in a header, or in the root README, it is written `Templates and Quality Rules` with the word.
 
 ---
 
-## Footer Block
+## 6. Weekly workflow
 
-Last thing in the file, after a horizontal rule.
+1. A post tagged `[GitHub]` in the master plan has a companion artifact.
+2. Draft the post copy. Check it against the 3,000 character LinkedIn limit before the artifact work starts, because a post that has to lose a section may move that section to a different post, and the artifact follows the section.
+3. Build the artifact using the format table above and the rules in `anti-ai-artifacts.md`.
+4. Build the image using `visual-style-guide.md`, then open it and look at it. Matplotlib clips nothing and warns about nothing.
+5. Drop the artifact in `artifacts/`, named per the convention.
+6. Add one row to the root README table, and a route to `artifacts/README.md` if the file changes one.
+7. Add reverse links in any older artifact that should now point forward, in the same commit.
+8. Commit straight to `main`, message form per `anti-ai-artifacts.md`.
+9. Add the repo link to the LinkedIn post before it is scheduled, then fill the traceability comment in the artifact once the post is live.
 
-```markdown
----
+No branches, no pull requests. This is a single-contributor reference repo.
 
-## Related Artifacts
-
-* [artifacts/post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) - Step 4 covers unhappy path discovery
-
----
-
-Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
-
-LinkedIn · https://www.linkedin.com/in/yuliamelekhova
-```
-
-Four rules govern it:
-
-1. `Related Artifacts` appears only when at least one relation exists. With none, the two sign-off lines stand alone.
-2. Each entry is a link, a space, a plain hyphen, a space, and one clause giving a reason to click. Not a description of the file.
-3. Relations are ordered by relevance, not by post number.
-4. When a relation is symmetric, the older file gets the reverse link in the same commit. One-directional links decay, because the person editing the older file never sees the newer one.
-
----
-
-## Link Format
-
-One canonical form, used in files and in both READMEs. Link text is the repository-relative path, link target is the absolute URL, and both point at the same file.
-
-```
-[artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md)
-```
-
-Folders use `tree` in place of `blob`:
-
-```
-[knowledge-packs/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/knowledge-packs/)
-```
-
-The recurring error is a doubled `artifacts/artifacts/` in the URL. Every link is checked before commit.
-
----
-
-## Writing Rules
-
-Applied to every file, including the READMEs.
-
-**No em dashes.** An en dash only where a dash carries real meaning. Splitting the sentence in two is almost always better. Plain hyphens in file names, compound words and related-artifact bullets are hyphens and are fine.
-
-**Step headers use colons.** `Step 1: Trace the requirement backward`, never a dash.
-
-**Four-item lists by default.** Three only where a fourth does not exist. Two is fine. Seven is fine.
-
-**No emoji in headers.** Anywhere, including footers.
-
-**American English throughout.**
-
-**Nothing unfinished ships.** No placeholder rows, no bracketed instructions left in a template, no section written to be filled in later.
-
----
-
-## Commits
-
-One artifact per commit where practical, straight to `main`. No pull requests, since this is a single-author repository.
-
-```
-Add Post 19 artifact: Unhappy Path Mapping Framework
-Add branch reference: ISO 20022 CBPR+ Knowledge Pack
-Update Post 19 artifact: corrected screening sequence
-Update README: add Post 19 row
-```
-
-No prefixes, no trailing period, no emoji, no em dash.
-
----
-
-## Adding a File
-
-**Step 1: Decide which kind it is.** Post artifact or branch reference. Everything else follows from that.
-
-**Step 2: Check it against the selection test.** The four criteria live in [CONTRIBUTING.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/CONTRIBUTING.md).
-
-**Step 3: Write header, body, footer.** All three. Never two of the three.
-
-**Step 4: Add the relations in both directions.** New file to old, and old file back to new, in the same commit.
-
-**Step 5: Update the indexes.** A post artifact adds a row to the root README table and an entry in `artifacts/README.md`. A branch reference updates `artifacts/README.md` only where it changes a task route.
+Step 9 is the one that gets forgotten, because it happens after the satisfying part is done. An artifact with an empty `<!-- LinkedIn: -->` comment three weeks after publication is the normal failure here.
 
 ---
 
 ## Related Artifacts
 
-* [CONTRIBUTING.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/CONTRIBUTING.md) - The editorial standard that sits on top of these mechanics
-* [artifacts/README.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/README.md) - The conventions here applied across the published set
+* [README.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/README.md) - The published index, and the row you add in step 6
+* [artifacts/README.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/README.md) - The task-route index, updated when a file changes which route someone would take
+* [CONTRIBUTING.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/CONTRIBUTING.md) - What earns an artifact in the first place, before any of the mechanics here apply
 
 ---
 
