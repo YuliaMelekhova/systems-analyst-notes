@@ -1,0 +1,171 @@
+# LinkedIn:
+#
+# Architecture Decision Record Template
+#
+# Series: Systems Analyst Notes
+# Post: 23
+# Phase: 4 APIs as Products
+# Author: Yulia Melekhova
+# Published: 2026
+#
+# Purpose
+# A structured ADR that can be validated, queried and rendered rather than only read.
+# Reach for it when a decision will outlive the requirement that produced it, which
+# is most decisions worth recording at all.
+#
+# Why YAML and not prose
+# A prose ADR can be read. A structured one can also be checked for consistency,
+# queried for impact ("which decisions touch the settlement service"), diffed
+# meaningfully in review, and turned into a diagram from the same source. On a
+# platform where one routing decision reaches four markets, three message families
+# and two regulatory frameworks, that difference is the difference between reading
+# forty documents and running a query.
+#
+# FOLDER AND NAMING CONVENTION
+#   decisions/ADR-0001-short-slug.yaml
+#   Four-digit sequence, never reused, never renumbered.
+#   Slug is 2 to 5 lowercase hyphenated words taken from the title.
+#   Superseded records stay in place with status changed. Nothing is deleted.
+#   One decision per file. A file with two decisions cannot be superseded cleanly.
+#
+# MERGE GATE, run before this file reaches main
+#   1. status is one of proposed, accepted, superseded, deprecated. Never blank.
+#   2. Every entry under services_affected exists in the service registry.
+#   3. rationale.alternatives_rejected has at least one entry with a reason.
+#      A decision with no rejected alternative was not a decision.
+#   4. consequences.negative has at least one entry. Every real trade-off costs
+#      something, and a record showing pure upside is the one nobody trusts later.
+#   5. supersedes points at a real ADR id, and that record's status is changed to
+#      superseded in the same commit.
+
+id: ADR-0000
+title: Short declarative statement of the decision
+status: proposed              # proposed | accepted | superseded | deprecated
+date_proposed: 2026-01-01
+date_decided:                 # empty while status is proposed
+supersedes:                   # ADR id this replaces, or empty
+superseded_by:                # filled in when this record is replaced
+
+# ---------------------------------------------------------------------------
+# WHERE THE DECISION SITS
+# Domain and capability are the query keys. Keep the vocabulary closed, and keep
+# it the same vocabulary the service registry and the requirement tooling use.
+# ---------------------------------------------------------------------------
+domain: payments              # payments | compliance | identity | reporting | platform
+capability: settlement-routing
+markets:                      # markets the decision applies to
+  - US
+  - MX
+regulatory_frameworks:        # frameworks that constrain or are affected by it
+  - ISO 20022 CBPR+
+  - BSA/AML
+
+# ---------------------------------------------------------------------------
+# WHO OWNS IT
+# One accountable name. Consulted parties are listed because a decision taken
+# without compliance in the room gets reopened by compliance later.
+# ---------------------------------------------------------------------------
+decision_owner: Name Surname
+consulted:
+  - Name Surname, compliance
+  - Name Surname, backend
+informed:
+  - Name Surname, product
+
+# ---------------------------------------------------------------------------
+# WHAT IT TOUCHES
+# This block is what makes automated impact analysis possible. Every name here
+# has to match the registry exactly, or the query silently returns nothing.
+# ---------------------------------------------------------------------------
+services_affected:
+  - name: settlement-orchestrator
+    role: producer            # producer | consumer | router | store | gate
+    impact: behavior          # behavior | contract | data | configuration
+  - name: reconciliation-service
+    role: consumer
+    impact: data
+
+contracts_affected:
+  - name: settlement.instruction.v2
+    change_type: non-breaking # new | breaking | non-breaking | none
+  - name: camt.053.daily-report
+    change_type: breaking
+
+entities_affected:
+  - SettlementAttempt
+  - PayoutBatch
+
+relationships:
+  motivated_by:
+    - REQ-0000                # requirement that raised the decision
+  constrains:
+    - ADR-0000                # decisions that must stay consistent with this one
+  referenced_by:
+    - artifacts/post-22-api-contract-template.yaml
+
+# ---------------------------------------------------------------------------
+# THE DECISION
+# Context is what was true before. Decision is what changes. Keep them apart:
+# a context paragraph carrying the decision inside it cannot be diffed later.
+# ---------------------------------------------------------------------------
+context: >
+  What was true before this decision, in four sentences or fewer. The forces in
+  play, the constraint that made a choice necessary, and what breaks if nothing
+  is decided. No solution language in this field.
+
+decision: >
+  What was decided, in the present tense, as a statement of fact about the system.
+  One decision. If the sentence needs an "and", check whether it is two records.
+
+rationale:
+  why_this_option: >
+    The reasoning that made this the chosen option, including the constraint that
+    ruled the others out.
+  alternatives_rejected:
+    - option: Alternative that was seriously considered
+      reason: Why it was rejected, specifically
+    - option: Second alternative
+      reason: Why it was rejected, specifically
+  assumptions:
+    - Assumption this decision rests on, and how it would be falsified
+  evidence:
+    - Link, measurement or incident that informed the decision
+
+# ---------------------------------------------------------------------------
+# WHAT IT COSTS
+# The negative list is mandatory. A record with an empty one is a record that
+# was written to justify a decision rather than to document it.
+# ---------------------------------------------------------------------------
+consequences:
+  positive:
+    - What improves, stated as something observable
+  negative:
+    - What gets worse, harder or more expensive
+  neutral:
+    - What changes without being better or worse
+  risks:
+    - risk: What could go wrong as a result
+      mitigation: What is in place, or UNKNOWN with a name against it
+
+# ---------------------------------------------------------------------------
+# WHEN TO REVISIT
+# A decision without a revisit trigger becomes permanent by accident.
+# ---------------------------------------------------------------------------
+review:
+  revisit_when:
+    - Condition that would make this decision wrong
+    - Date or regulatory milestone that changes the constraint
+  review_by: 2027-01-01
+
+# Related Artifacts
+#   artifacts/post-21-requirement-decomposition-template.md
+#     services_affected above uses the same role vocabulary as the decomposition table.
+#   artifacts/post-22-api-contract-template.yaml
+#     A contract choice recorded here is what the contract file implements.
+#   artifacts/post-24-changelog-template.md
+#     A requirement change that reopens a decision gets a row there and a record here.
+#   artifacts/post-12-knowledge-graph.mmd
+#     relationships above are the edges the knowledge graph draws.
+
+# Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
+# LinkedIn · https://www.linkedin.com/in/yuliamelekhova
