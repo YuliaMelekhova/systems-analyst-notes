@@ -41,6 +41,10 @@ decide when a document is ready for review.
 | 16 | Context Diagram - Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
 | 18 | My 5-Step Discovery Framework | Phase 3 Building the Foundation | [artifacts/post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) |
 | 19 | Mapping the Unhappy Path Before You Design the Happy One | Phase 3 Building the Foundation | [artifacts/post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) |
+| 21 | Multi-Service Requirement Decomposition Template | Phase 4 APIs as Products | [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) |
+| 22 | API Contract Template | Phase 4 APIs as Products | [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) |
+| 23 | Architecture Decision Record Template | Phase 4 APIs as Products | [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) |
+| 24 | Requirement Change Log Template | Phase 4 APIs as Products | [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
