@@ -1,0 +1,406 @@
+# LinkedIn:
+#
+# API Contract Template
+#
+# Series: Systems Analyst Notes
+# Post: 22
+# Phase: 4 APIs as Products
+# Author: Yulia Melekhova
+# Published: 2026
+#
+# Purpose
+# An OpenAPI skeleton for a cross-border payment initiation endpoint, with every
+# field a business analyst has to answer marked "BA". Reach for it when a contract
+# has to be agreed before any code is written against it.
+#
+# How to read the markers
+#   BA        the analyst owns this value and it belongs in the requirement
+#   BA+LEGAL  compliance or legal has to confirm the value before build
+#   ENG       engineering owns it, listed so the analyst knows it exists
+#   ASSUMED   a value nobody has confirmed yet, which is the field that causes rework
+#
+# Anything still marked ASSUMED at build time is the four-week-rework field.
+# Replace it or write UNKNOWN with a name against it. Do not leave a guess in place.
+
+openapi: 3.1.0
+
+info:
+  title: Cross-Border Payment Initiation API
+  version: "1.0.0"
+  description: >
+    Template contract. Replace every placeholder before use.
+    The schema is the requirement, so a field added here without a rule
+    behind it is a field nobody can validate.
+  contact:
+    name: Accountable owner for this contract    # BA: one named person, not a team
+    email: owner@example.com
+
+servers:
+  - url: https://api.example.com/v1
+    description: Production
+  - url: https://sandbox.example.com/v1
+    description: Sandbox
+
+# ---------------------------------------------------------------------------
+# SECURITY
+# The assumption that broke a real integration: "API key, obviously."
+# The vendor used OAuth 2.0 with an async callback. Name the method here.
+# ---------------------------------------------------------------------------
+security:
+  - oauth2ClientCredentials: [payments.write]
+
+paths:
+
+  /payments:
+    post:
+      summary: Submit a payment instruction
+      operationId: createPayment
+      description: >
+        Synchronous acknowledgement, asynchronous settlement.
+        The response confirms acceptance of the instruction, not settlement.
+        BA: state which one the business means by "payment confirmed".
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true          # BA: required, because a retried submission must not double-pay
+          schema:
+            type: string
+            format: uuid
+          description: >
+            Client-generated. Retention window for replay detection: 24h.
+            BA: the window is a business decision, not an infrastructure default.
+        - name: X-Corridor
+          in: header
+          required: true          # BA: corridor drives standard, gates and acceptable rails
+          schema:
+            type: string
+            enum: [US-MX, US-BR, US-CO]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentInstruction'
+      responses:
+        '202':
+          description: Instruction accepted for processing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentAccepted'
+        '400':
+          description: Schema or field-level validation failure. Not retryable.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '409':
+          description: Idempotency key reused with a different payload. Not retryable.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '422':
+          description: >
+            Business rule rejection: verification mismatch, sanctions hold,
+            corridor closed, threshold exceeded. Retryable only after the
+            underlying condition changes.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '429':
+          description: Rate limit exceeded. Retryable with backoff.
+          headers:
+            Retry-After:
+              schema:
+                type: integer
+              description: Seconds to wait before retrying.
+        '503':
+          description: Downstream rail unavailable. Retryable.
+
+  /payments/{paymentId}:
+    get:
+      summary: Retrieve current status of a payment instruction
+      operationId: getPayment
+      parameters:
+        - name: paymentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Current status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentStatus'
+        '404':
+          description: Unknown payment identifier
+
+  /payees/verify:
+    post:
+      summary: Verify beneficiary IBAN against beneficiary name
+      operationId: verifyPayee
+      description: >
+        BA+LEGAL: under PSD3 and PSR this call is mandatory before a credit
+        transfer settles in EU corridors. The contract has to name the endpoint,
+        the response values and the payment behavior for each value.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayeeVerificationRequest'
+      responses:
+        '200':
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PayeeVerificationResult'
+
+components:
+
+  securitySchemes:
+    oauth2ClientCredentials:
+      type: oauth2                       # BA: confirmed with the counterparty, never assumed
+      flows:
+        clientCredentials:
+          tokenUrl: https://auth.example.com/oauth2/token
+          scopes:
+            payments.write: Submit payment instructions
+            payments.read: Read payment status
+      description: >
+        ENG: credential storage is the platform secret manager.
+        BA: token lifetime 3600s, refresh handled by the client.
+        A wrong answer here is not a bug, it is a rebuild.
+
+  schemas:
+
+    PaymentInstruction:
+      type: object
+      required: [endToEndId, instructedAmount, debtor, debtorAccount, creditor, creditorAccount, purposeCode]
+      properties:
+        endToEndId:
+          type: string
+          maxLength: 35                  # BA: 35 is the ISO 20022 limit, not a preference
+          description: Client reference carried unchanged through every stage.
+        instructedAmount:
+          $ref: '#/components/schemas/Amount'
+        requestedExecutionDate:
+          type: string
+          format: date
+          description: >
+            BA: value date, not submission date. Rules that take effect on a
+            calendar date apply by value date, so an instruction submitted
+            before a deadline and settling after it must already comply.
+        debtor:
+          $ref: '#/components/schemas/Party'
+        debtorAccount:
+          $ref: '#/components/schemas/Account'
+        creditor:
+          $ref: '#/components/schemas/Party'
+        creditorAccount:
+          $ref: '#/components/schemas/Account'
+        purposeCode:
+          type: string
+          pattern: '^[A-Z]{4}$'          # BA+LEGAL: drives AML classification downstream
+        remittanceInformation:
+          type: object
+          properties:
+            structured:
+              type: array
+              items:
+                type: object
+                properties:
+                  referenceType: { type: string }
+                  reference: { type: string }
+            unstructured:
+              type: string
+              maxLength: 140
+              description: >
+                BA: structured is preferable for straight-through processing.
+                Free text here means a human reads it somewhere downstream.
+
+    Party:
+      type: object
+      required: [name, postalAddress]
+      properties:
+        name:
+          type: string
+          maxLength: 140
+        lei:
+          type: string
+          pattern: '^[A-Z0-9]{18}[0-9]{2}$'
+          description: "BA+LEGAL: mandatory for some corridors, optional in others. Name which."
+        postalAddress:
+          $ref: '#/components/schemas/PostalAddress24'
+
+    # -----------------------------------------------------------------------
+    # PostalAddress24 is a versioned contract, not a text field.
+    # Today: townName and country are mandatory.
+    # Recommended now, likely mandatory later: streetName, buildingNumber, postCode.
+    # Storing this as one free-text string is the decision that becomes a migration.
+    # -----------------------------------------------------------------------
+    PostalAddress24:
+      type: object
+      required: [townName, country]
+      properties:
+        streetName:
+          type: string
+          maxLength: 70                  # BA: recommended today, design it in anyway
+        buildingNumber:
+          type: string
+          maxLength: 16
+        postCode:
+          type: string
+          maxLength: 16
+        townName:
+          type: string
+          maxLength: 35                  # BA+LEGAL: mandatory
+        countrySubDivision:
+          type: string
+          maxLength: 35
+        country:
+          type: string
+          pattern: '^[A-Z]{2}$'          # BA+LEGAL: mandatory, ISO 3166-1 alpha-2
+      additionalProperties: false
+      description: >
+        Unstructured address blocks are rejected on CBPR+ payment messages.
+        The rejection happens at the network, after the payment leaves the platform.
+
+    Account:
+      type: object
+      required: [identification]
+      properties:
+        identification:
+          type: object
+          properties:
+            iban:
+              type: string
+              pattern: '^[A-Z]{2}[0-9]{2}[A-Z0-9]{1,30}$'
+            other:
+              type: object
+              properties:
+                id: { type: string }
+                schemeName: { type: string }
+        currency:
+          type: string
+          pattern: '^[A-Z]{3}$'
+
+    Amount:
+      type: object
+      required: [value, currency]
+      properties:
+        value:
+          type: string
+          pattern: '^\d+\.\d{2}$'
+          description: >
+            ENG: string, not float. Decimal precision in JSON floats is where
+            rounding differences between two services start.
+        currency:
+          type: string
+          pattern: '^[A-Z]{3}$'
+
+    PayeeVerificationRequest:
+      type: object
+      required: [iban, name]
+      properties:
+        iban: { type: string }
+        name: { type: string }
+
+    PayeeVerificationResult:
+      type: object
+      required: [outcome]
+      properties:
+        outcome:
+          type: string
+          enum: [MATCH, PARTIAL_MATCH, NO_MATCH, UNAVAILABLE]
+        suggestedName:
+          type: string
+          description: Returned on PARTIAL_MATCH only.
+      description: >
+        BA: the contract is incomplete until the payment behavior for each of the
+        four outcomes is written down. MATCH proceeds. The other three need a
+        named decision, and UNAVAILABLE needs one whether or not it is rare.
+
+    PaymentAccepted:
+      type: object
+      required: [paymentId, status, acceptedAt]
+      properties:
+        paymentId:
+          type: string
+          description: "BA: this is the confirmation identifier the client stores."
+        status:
+          type: string
+          enum: [ACCEPTED_TECHNICAL_VALIDATION]
+        acceptedAt:
+          type: string
+          format: date-time
+
+    PaymentStatus:
+      type: object
+      required: [paymentId, status]
+      properties:
+        paymentId: { type: string }
+        status:
+          type: string
+          enum:
+            - ACCEPTED_TECHNICAL_VALIDATION
+            - PENDING_COMPLIANCE
+            - ON_HOLD_SANCTIONS
+            - IN_CLEARING
+            - SETTLED
+            - RETURNED
+            - REJECTED
+        reasonCode:
+          type: string
+          description: "BA+LEGAL: present on RETURNED and REJECTED. Map each code to a customer message."
+        lastUpdated:
+          type: string
+          format: date-time
+
+    Problem:
+      type: object
+      required: [type, title, status, retryable]
+      properties:
+        type: { type: string, format: uri }
+        title: { type: string }
+        status: { type: integer }
+        detail:
+          type: string
+          description: 'BA: where the error explanation lives. Name the field, not the response body generally.'
+        retryable:
+          type: boolean
+          description: >
+            BA: explicit, not inferred from the status code. A consumer that has to
+            guess retryability will guess wrong on at least one code.
+
+# ---------------------------------------------------------------------------
+# RATE LIMITS AND TIMEOUTS
+# Not part of the OpenAPI schema, and still part of the contract. Agree them here
+# or discover them in production.
+#
+#   Requests per minute per client        BA
+#   Burst allowance                       BA
+#   Behavior on limit exceeded            429 with Retry-After
+#   Backoff strategy                      exponential, base 2s, max 5 attempts   ENG
+#   Client-side timeout                   BA, and it has to be shorter than the gateway timeout
+#   Gateway timeout                       ENG
+#   Callback delivery retries             BA, including what happens after the last one
+# ---------------------------------------------------------------------------
+
+# Related Artifacts
+#   artifacts/post-21-requirement-decomposition-template.md
+#     Every contract named in the decomposition gets specified in a file like this one.
+#   artifacts/post-23-adr-template.yaml
+#     A contract choice that survives the requirement belongs in an ADR, not in a comment here.
+#   artifacts/post-19-unhappy-path-mapping.md
+#     The 4xx and 5xx responses above are the unhappy paths, written as contract.
+#   artifacts/post-24-changelog-template.md
+#     Every change to this file gets a row, including the ones that look non-breaking.
+
+# Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
+# LinkedIn · https://www.linkedin.com/in/yuliamelekhova
