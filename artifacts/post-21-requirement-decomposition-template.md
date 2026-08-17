@@ -1,4 +1,4 @@
-<!-- LinkedIn:  -->
+<!-- LinkedIn:  --> https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-requirementsengineering-microservices-share-7494720407485329410-8-R0/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABW2QzcBN4fI21bG0ls7u2nHq-ooXTFxjEU
 
 # Multi-Service Requirement Decomposition Template
 
