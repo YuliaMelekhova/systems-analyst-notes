@@ -1,4 +1,4 @@
-<!-- LinkedIn:  -->
+<!-- LinkedIn:  https://www.linkedin.com/posts/yuliamelekhova_systemsanalysis-businessanalysis-documentation-share-7494722187745165312-VhCO/-->
 
 # Requirement Change Log Template
 
