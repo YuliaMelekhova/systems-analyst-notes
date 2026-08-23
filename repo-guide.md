@@ -50,15 +50,17 @@ systems-analyst-notes/
 └── artifacts/
     ├── README.md                  ← task-route index, "which file for which job"
     ├── post-10-tribal-knowledge-signs.md
-    ├── post-12-knowledge-graph.mmd
+    ├── post-12-knowledge-graph.md
     ├── post-14-intake-checklist.md
-    ├── post-16-context-diagram.mmd
+    ├── post-16-context-diagram.md
     ├── post-18-discovery-framework.md
     ├── post-19-unhappy-path-mapping.md
     ├── post-21-requirement-decomposition-template.md
     ├── post-22-api-contract-template.yaml
     ├── post-23-adr-template.yaml
-    └── post-24-changelog-template.md
+    ├── post-24-changelog-template.md
+    ├── post-25-sequence-diagram.md
+    └── post-28-api-versioning-policy.md
 ```
 
 Only files that actually exist are listed. An earlier version of this guide carried a projected list of thirty filenames reaching to Post 66, and every one of them was a guess that went stale as the plan moved. The forward-looking list lives in the master plan, in the `GITHUB COMPANION ARTIFACTS` section, which is the one place it can be maintained without duplication.
@@ -82,12 +84,16 @@ The five top-level folders mirror the ADF branches from Post 7. They stay mostly
 
 * `NN` is the two-digit post number, matching the master plan exactly.
 * `short-slug` is 2 to 5 words, lowercase, hyphen separated, taken from the post title.
-* An inserted post takes the preceding number plus a lowercase letter: `post-28a-mandated-change-register.md`. The plan and the artifact header write it uppercase, `28A`. Sorting holds because `28a` falls between `28` and `29`.
-* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-48-c4-diagrams/context.mmd`, `container.mmd`, `component.mmd`.
+* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-49-c4-diagrams/context.mmd`, `container.mmd`, `component.mmd`.
+* A lowercase letter appears only on the second half of a post split across two publications: `post-44a-...`. It never marks an insertion. `anti-ai-artifacts.md` has the reasoning.
 
 No dates in filenames. The post number is the permanent identifier, and dates live in the README table only.
 
-A number is never reused and never renumbered. Published posts, artifact filenames and README rows all carry it, and none of those can be rewritten after the fact.
+### Renumbering, and when it costs nothing
+
+A post inserted into the plan shifts every post below it. That sounds expensive and usually is not, because an insertion lands below everything already published and everything already built. The rename set is the plan, not the repository.
+
+Check before assuming otherwise: list the artifacts in `artifacts/`, take the highest number, and compare it to the insertion point. If the insertion sits above an existing artifact, the file has to be renamed and its README row rewritten, and any published post pointing at the old URL now points at nothing. That is the case worth avoiding, and the way to avoid it is to place the post lower rather than to invent a letter.
 
 ---
 
@@ -96,12 +102,12 @@ A number is never reused and never renumbered. Published posts, artifact filenam
 | Content type | Extension | Example |
 |---|---|---|
 | Checklists, frameworks, specs, prose docs | `.md` | `post-18-discovery-framework.md` |
-| Diagrams (sequence, context, ER, knowledge graph, C4) | `.mmd` Mermaid source | `post-25-sequence-diagram.mmd` |
+| Diagrams (sequence, context, ER, knowledge graph, C4) | `.md`, Mermaid source in a fenced code block | `post-25-sequence-diagram.md` |
 | Matrices, decision tables, regulatory mappings | `.csv` | `post-53-regulatory-matrix.csv` |
 | API contracts, structured records, anything queryable | `.yaml` | `post-22-api-contract-template.yaml` |
 | Multi-part artifacts | folder of the above | `post-54-seven-techniques-password-reset/` |
 
-Diagrams go in as Mermaid source rather than exported images. GitHub renders `.mmd` natively in the file preview, and the artifact stays editable instead of becoming a flattened picture.
+Diagrams go in as Mermaid source rather than exported images. A standalone `.mmd` file does not render reliably in GitHub's file preview. A fenced ` ```mermaid ` code block inside a `.md` file does, so the diagram lives in `.md` with the header and footer block same as any other post artifact. Posts 12 and 16 were rebuilt on this basis after the `.mmd` version rendered incorrectly. `.mmd` stays the right extension only inside a multi-file folder artifact where the file is consumed by tooling rather than viewed on GitHub, for example `post-49-c4-diagrams/context.mmd`.
 
 The `.yaml` row widened after Post 23. A structured record that a rule can validate or a query can reach belongs in YAML even when it reads like prose, because the format is what makes it more than a document. An ADR is the worked example: the same content as markdown can only be read.
 
