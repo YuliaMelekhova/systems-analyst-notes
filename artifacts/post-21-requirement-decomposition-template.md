@@ -145,10 +145,11 @@ A one-line request, decomposed.
 
 ## Related Artifacts
 
+* [artifacts/post-16-context-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-16-context-diagram.mmd) - Draw the boundary first, then decompose what sits inside it
 * [artifacts/post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) - Step 2 of discovery produces the context that this template decomposes
 * [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) - Section 5 blast radius feeds directly into unhappy path mapping per service
 * [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) - Every contract named in section 2 gets specified here before build
-* [artifacts/post-16-context-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-16-context-diagram.mmd) - Draw the boundary first, then decompose what sits inside it
+* [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) - The owners this template names are the lifelines in this sequence diagram
 
 ---
 
