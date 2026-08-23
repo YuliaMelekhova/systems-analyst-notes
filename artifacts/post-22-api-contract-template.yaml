@@ -393,14 +393,16 @@ components:
 # ---------------------------------------------------------------------------
 
 # Related Artifacts
+#   artifacts/post-19-unhappy-path-mapping.md
+#     The 4xx and 5xx responses above are the unhappy paths, written as contract.
 #   artifacts/post-21-requirement-decomposition-template.md
 #     Every contract named in the decomposition gets specified in a file like this one.
 #   artifacts/post-23-adr-template.yaml
 #     A contract choice that survives the requirement belongs in an ADR, not in a comment here.
-#   artifacts/post-19-unhappy-path-mapping.md
-#     The 4xx and 5xx responses above are the unhappy paths, written as contract.
 #   artifacts/post-24-changelog-template.md
 #     Every change to this file gets a row, including the ones that look non-breaking.
+#   artifacts/post-25-sequence-diagram.md
+#     The timeout and retry fields in this contract, shown as annotated arrows across one full conversation
 #   artifacts/post-28-api-versioning-policy.md
 #     The policy that classifies a change to these fields as breaking or non-breaking
 
