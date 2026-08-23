@@ -45,6 +45,12 @@ decide when a document is ready for review.
 | 22 | API Contract Template | Phase 4 APIs as Products | [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) |
 | 23 | Architecture Decision Record Template | Phase 4 APIs as Products | [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) |
 | 24 | Requirement Change Log Template | Phase 4 APIs as Products | [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) |
+| 25 | Cross-Service Payment Sequence | Phase 4 APIs as Products | [artifacts/post-25-sequence-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.mmd)|
+| 28 | API Versioning and Deprecation | Phase 4 APIs as Products | [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md)|
+
+Post	Title	Phase	Artifact
+25	Cross-Service Payment Sequence	Phase 4 APIs as Products	artifacts/post-25-sequence-diagram.mmd
+28	API Versioning and Deprecation Policy	Phase 4 APIs as Products	artifacts/post-28-api-versioning-policy.md
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
