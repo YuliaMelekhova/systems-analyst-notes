@@ -48,10 +48,6 @@ decide when a document is ready for review.
 | 25 | Cross-Service Payment Sequence | Phase 4 APIs as Products | [artifacts/post-25-sequence-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.mmd)|
 | 28 | API Versioning and Deprecation | Phase 4 APIs as Products | [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md)|
 
-Post	Title	Phase	Artifact
-25	Cross-Service Payment Sequence	Phase 4 APIs as Products	artifacts/post-25-sequence-diagram.mmd
-28	API Versioning and Deprecation Policy	Phase 4 APIs as Products	artifacts/post-28-api-versioning-policy.md
-
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
 ## How this repo works
