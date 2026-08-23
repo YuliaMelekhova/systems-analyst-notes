@@ -401,6 +401,8 @@ components:
 #     The 4xx and 5xx responses above are the unhappy paths, written as contract.
 #   artifacts/post-24-changelog-template.md
 #     Every change to this file gets a row, including the ones that look non-breaking.
+#   artifacts/post-28-api-versioning-policy.md
+#     The policy that classifies a change to these fields as breaking or non-breaking
 
 # Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
 # LinkedIn · https://www.linkedin.com/in/yuliamelekhova
