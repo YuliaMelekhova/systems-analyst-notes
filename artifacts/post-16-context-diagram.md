@@ -101,6 +101,7 @@ The context diagram almost always needs at least one revision after the first st
 * [stride-threat-modeling/payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) - What to do with the boundary once it is drawn, one threat at a time
 * [artifacts/post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) - The discovery work that produces the actors on this diagram
 * [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) - Uses the boundary to answer the dependency gate
+* [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) - The conversation across this boundary, drawn arrow by arrow with timing and branches
 
 ---
 
