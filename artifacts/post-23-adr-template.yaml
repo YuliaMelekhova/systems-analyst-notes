@@ -166,6 +166,8 @@ review:
 #     A requirement change that reopens a decision gets a row there and a record here.
 #   artifacts/post-12-knowledge-graph.mmd
 #     relationships above are the edges the knowledge graph draws.
+#   artifacts/post-28-api-versioning-policy.md
+#     Where a deprecation ADR turns into a published notice period and sunset date
 
 # Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
 # LinkedIn · https://www.linkedin.com/in/yuliamelekhova
