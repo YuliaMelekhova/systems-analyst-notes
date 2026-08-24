@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/g59hfztP -->
 
 # Cross-Service Payment Sequence
 
