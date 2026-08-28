@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gx-Xchib-->
 
 # API Versioning and Deprecation Policy
 
