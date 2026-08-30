@@ -47,6 +47,7 @@ decide when a document is ready for review.
 | 24 | Requirement Change Log Template | Phase 4 APIs as Products | [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) |
 | 25 | Cross-Service Payment Sequence | Phase 4 APIs as Products | [artifacts/post-25-sequence-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.mmd)|
 | 28 | API Versioning and Deprecation | Phase 4 APIs as Products | [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md)|
+| 29 | Mandated Change Register | Phase 4 APIs as Products | [artifacts/post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
