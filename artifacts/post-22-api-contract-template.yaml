@@ -405,6 +405,8 @@ components:
 #     The timeout and retry fields in this contract, shown as annotated arrows across one full conversation
 #   artifacts/post-28-api-versioning-policy.md
 #     The policy that classifies a change to these fields as breaking or non-breaking
+#   artifacts/post-29-mandated-change-register.csv
+#     Tracks the effective date and breaking classification for the PSD3 and structured-address fields defined in this contract
 
 # Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
 # LinkedIn · https://www.linkedin.com/in/yuliamelekhova
