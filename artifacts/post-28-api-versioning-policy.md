@@ -145,6 +145,7 @@ A change that fails check 3 is the one that ships successfully, passes every tes
 * [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) - The five columns referenced by check 4 in the review gate
 * [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Where a deprecation decision is recorded at stage 1, before any client hears about it
 * [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) - Shows which participants a versioned response reaches, which is how the client tier list gets built
+* [artifacts/post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) - The regulator-scheduled changes this policy's client-tier table does not get to schedule
 
 ---
 
