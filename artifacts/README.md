@@ -25,6 +25,8 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Preparing a review process.** [templates-quality-rules/readiness-rules.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/readiness-rules.md) holds the gates and the status model.
 
+**Tracking a regulatory deadline you don't control.** [post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) holds one row per obligation, classified as breaking or non-breaking against the policy in [post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md).
+
 ---
 
 ## By Type
