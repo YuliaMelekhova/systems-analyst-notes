@@ -83,6 +83,7 @@ sequenceDiagram
 * [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) - The contract each arrow is calling, including the timeout and retry fields annotated here
 * [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) - Names the owner of every participant on this diagram before the conversation is specified
 * [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) - How this same participant list turns into a notice period and a breaking-change classification
+* [artifacts/post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) - Worked example: this diagram is one of the artifacts a Knowledge Pack workflow produced from a transcribed architecture review, not from a spec written for its own sake
 
 ---
 
