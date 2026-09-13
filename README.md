@@ -49,6 +49,7 @@ decide when a document is ready for review.
 | 28 | API Versioning and Deprecation | Phase 4 APIs as Products | [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md)|
 | 29 | Mandated Change Register | Phase 4 APIs as Products | [artifacts/post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) |
 | 34 | Knowledge Pack Template | Phase 5 Bringing AI Into the Workflow | [artifacts/post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) |
+| 39 | Human-in-the-Loop Checkpoint and Kill Switch Specification | Phase 5 Bringing AI Into the Workflow | [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
