@@ -51,7 +51,8 @@ decide when a document is ready for review.
 | 34 | Knowledge Pack Template | Phase 5 Bringing AI Into the Workflow | [artifacts/post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) |
 | 39 | Human-in-the-Loop Checkpoint and Kill Switch Specification | Phase 5 Bringing AI Into the Workflow | [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) |
 | 41 | AI Agent Instruction Standard | Phase 6 AI Agents at Work | [artifacts/post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) |
-
+| 49 | C4 Diagram Set: Cross-Border Payment Platform | Phase 6 AI Agents at Work | [artifacts/post-49-c4-diagrams/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-49-c4-diagrams/) |
+| 50 | Four Levels of Documentation | Phase 6 AI Agents at Work | [artifacts/post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) |
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
 ## How this repo works
