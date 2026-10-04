@@ -84,7 +84,7 @@ The five top-level folders mirror the ADF branches from Post 7. They stay mostly
 
 * `NN` is the two-digit post number, matching the master plan exactly.
 * `short-slug` is 2 to 5 words, lowercase, hyphen separated, taken from the post title.
-* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-49-c4-diagrams/context.mmd`, `container.mmd`, `component.mmd`.
+* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-49-c4-diagrams/context.md`, `container.md`, `component.md`.
 * A lowercase letter appears only on the second half of a post split across two publications: `post-44a-...`. It never marks an insertion. `anti-ai-artifacts.md` has the reasoning.
 
 No dates in filenames. The post number is the permanent identifier, and dates live in the README table only.
@@ -107,7 +107,7 @@ Check before assuming otherwise: list the artifacts in `artifacts/`, take the hi
 | API contracts, structured records, anything queryable | `.yaml` | `post-22-api-contract-template.yaml` |
 | Multi-part artifacts | folder of the above | `post-54-seven-techniques-password-reset/` |
 
-Diagrams go in as Mermaid source rather than exported images. A standalone `.mmd` file does not render reliably in GitHub's file preview. A fenced ` ```mermaid ` code block inside a `.md` file does, so the diagram lives in `.md` with the header and footer block same as any other post artifact. Posts 12 and 16 were rebuilt on this basis after the `.mmd` version rendered incorrectly. `.mmd` stays the right extension only inside a multi-file folder artifact where the file is consumed by tooling rather than viewed on GitHub, for example `post-49-c4-diagrams/context.mmd`.
+Diagrams go in as Mermaid source rather than exported images. A standalone `.mmd` file does not render reliably in GitHub's file preview. A fenced ` ```mermaid ` code block inside a `.md` file does, so the diagram lives in `.md` with the header and footer block same as any other post artifact. Posts 12 and 16 were rebuilt on this basis after the `.mmd` version rendered incorrectly. A multi-file diagram artifact is a folder of `.md` files, each with its own fenced block, for example `post-49-c4-diagrams/context.md`. `.mmd` is used only when a file is consumed by tooling and never opened on GitHub.
 
 The `.yaml` row widened after Post 23. A structured record that a rule can validate or a query can reach belongs in YAML even when it reads like prose, because the format is what makes it more than a document. An ADR is the worked example: the same content as markdown can only be read.
 
