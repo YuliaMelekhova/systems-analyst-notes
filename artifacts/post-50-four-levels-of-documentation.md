@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/g3wQDxMa-->
 
 # Four Levels of Documentation
 
