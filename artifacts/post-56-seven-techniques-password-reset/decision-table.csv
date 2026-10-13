@@ -1,0 +1,14 @@
+rule_id,stage,prior_requests_lt_3,wait_60s_met,account_usable,within_5_min,code_matches,failed_before_entry,attempt_verified,password_meets_rule,action,message_id,state_change,business_rule
+D01,request,N,-,-,-,-,-,-,-,REJECT_RATE_LIMIT,M-05,none,BR-05
+D02,request,Y,N,-,-,-,-,-,-,REJECT_WAIT,M-06,none,BR-05
+D03,request,Y,Y,N,-,-,-,-,-,CREATE_ATTEMPT_NO_SMS,M-01,attempt OPEN; earlier attempt SUPERSEDED,BR-04;BR-05;BR-08
+D04,request,Y,Y,Y,-,-,-,-,-,CREATE_ATTEMPT_SEND_SMS,M-01,attempt OPEN; code hash stored; earlier attempt SUPERSEDED,BR-01;BR-02;BR-03;BR-05
+D05,verify,-,-,-,N,-,-,-,-,REJECT_EXPIRED,M-03,attempt EXPIRED,BR-03
+D06,verify,-,-,-,Y,Y,-,-,-,ALLOW_NEW_PASSWORD,none,attempt VERIFIED,BR-03;BR-04
+D07,verify,-,-,-,Y,N,0,-,-,REJECT_CODE,M-02,failed_count 1,BR-04
+D08,verify,-,-,-,Y,N,1,-,-,REJECT_CODE,M-02,failed_count 2,BR-04
+D09,verify,-,-,-,Y,N,2,-,-,LOCK_ACCOUNT,M-04,failed_count 3; attempt EXHAUSTED; account locked 30 minutes if it exists,BR-04;BR-08
+D10,submit,-,-,-,N,-,-,-,-,REJECT_EXPIRED,M-03,attempt EXPIRED,BR-03
+D11,submit,-,-,-,Y,-,-,N,-,REJECT_NOT_VERIFIED,M-02,none; customer returns to S2,BR-06
+D12,submit,-,-,-,Y,-,-,Y,N,REJECT_PASSWORD,M-07,none,BR-06
+D13,submit,-,-,-,Y,-,-,Y,Y,COMPLETE_RESET,M-08,attempt COMPLETED; all sessions revoked; confirmation SMS queued,BR-06;BR-07
