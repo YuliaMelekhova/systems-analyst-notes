@@ -26,7 +26,7 @@ which market: EU AI Act, NIST AI RMF, ISO/IEC 42001, LGPD, LFPDPPP, Law
 **Prompt Library** - prompts shaped for common analytical tasks, kept as
 reusable references instead of rewritten from scratch every time.
 
-**Templates & Quality Rules** - the actual artifact templates (BRD, SRS, ADR,
+**Templates and Quality Rules** - the actual artifact templates (BRD, SRS, ADR,
 API contracts, decision tables) plus the naming and readiness rules that
 decide when a document is ready for review.
 
@@ -35,33 +35,37 @@ decide when a document is ready for review.
 | Post | Title | Phase | File |
 |---|---|---|---|
 | 7 | Documentation Is Organizational Memory | Phase 2 The Knowledge Chapter | this README |
-| 10 | Six Signs Tribal Knowledge Is Becoming Dangerous | Phase 2 The Knowledge Chapter | [artifacts/post-10-tribal-knowledge-signs.md](artifacts/post-10-tribal-knowledge-signs.md) |
-| 12 | Knowledge Graph - Mapping How Information Actually Connects | Phase 2 The Knowledge Chapter | [artifacts/post-12-knowledge-graph.md](artifacts/post-12-knowledge-graph.md) |
-| 14 | 3 Questions Before Writing Any Requirement | Phase 3 Building the Foundation | [artifacts/post-14-intake-checklist.md](artifacts/post-14-intake-checklist.md) |
-| 16 | Context Diagram - Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](artifacts/post-16-context-diagram.md) |
-| 18 | My 5-Step Discovery Framework | Phase 3 Building the Foundation | [artifacts/post-18-discovery-framework.md](artifacts/post-18-discovery-framework.md) |
-| 19 | Mapping the Unhappy Path Before You Design the Happy One | Phase 3 Building the Foundation | [artifacts/post-19-unhappy-path-mapping.md](artifacts/post-19-unhappy-path-mapping.md) |
+| 10 | Six Signs Tribal Knowledge Is Becoming Dangerous | Phase 2 The Knowledge Chapter | [artifacts/post-10-tribal-knowledge-signs.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-10-tribal-knowledge-signs.md) |
+| 12 | Knowledge Graph - Mapping How Information Actually Connects | Phase 2 The Knowledge Chapter | [artifacts/post-12-knowledge-graph.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-12-knowledge-graph.md) |
+| 14 | 3 Questions Before Writing Any Requirement | Phase 3 Building the Foundation | [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) |
+| 16 | Context Diagram - Drawing the Boundary First | Phase 3 Building the Foundation | [artifacts/post-16-context-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-16-context-diagram.md) |
+| 18 | My 5-Step Discovery Framework | Phase 3 Building the Foundation | [artifacts/post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) |
+| 19 | Mapping the Unhappy Path Before You Design the Happy One | Phase 3 Building the Foundation | [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) |
 | 21 | Multi-Service Requirement Decomposition Template | Phase 4 APIs as Products | [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) |
 | 22 | API Contract Template | Phase 4 APIs as Products | [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) |
 | 23 | Architecture Decision Record Template | Phase 4 APIs as Products | [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) |
 | 24 | Requirement Change Log Template | Phase 4 APIs as Products | [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) |
 | 25 | Cross-Service Payment Sequence | Phase 4 APIs as Products | [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) |
-| 28 | API Versioning and Deprecation | Phase 4 APIs as Products | [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md)|
+| 28 | API Versioning and Deprecation | Phase 4 APIs as Products | [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) |
 | 29 | Mandated Change Register | Phase 4 APIs as Products | [artifacts/post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) |
 | 34 | Knowledge Pack Template | Phase 5 Bringing AI Into the Workflow | [artifacts/post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) |
 | 39 | Human-in-the-Loop Checkpoint and Kill Switch Specification | Phase 5 Bringing AI Into the Workflow | [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) |
 | 41 | AI Agent Instruction Standard | Phase 6 AI Agents at Work | [artifacts/post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) |
+| 46 | Agent Acceptance Criteria Template | Phase 6 AI Agents at Work | [artifacts/post-46-agent-acceptance-criteria.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-46-agent-acceptance-criteria.md) |
+| 47 | Multi-Agent Documentation Pipeline Map | Phase 6 AI Agents at Work | [artifacts/post-47-automation-pipeline-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-47-automation-pipeline-map.md) |
+| 48 | Loop Engineering Spec Template | Phase 6 AI Agents at Work | [artifacts/post-48-loop-engineering-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-48-loop-engineering-spec.md) |
 | 49 | C4 Diagram Set: Cross-Border Payment Platform | Phase 6 AI Agents at Work | [artifacts/post-49-c4-diagrams/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-49-c4-diagrams/) |
 | 50 | Four Levels of Documentation | Phase 6 AI Agents at Work | [artifacts/post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) |
 | 56 | Seven Ways to Document One Requirement | Phase 7 Process, Compliance and Fintech Reality | [artifacts/post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) |
+
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
 ## How this repo works
 
 Each companion artifact lives in `/artifacts`, named `post-NN-slug.ext`,
-matching the post number in the LinkedIn series. See `github_repo_guide.md`
-(kept outside this repo, in the content project) for the full naming and
-formatting convention.
+matching the post number in the LinkedIn series. See
+[repo-guide.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/repo-guide.md)
+for the full naming and formatting convention.
 
 ## License
 
