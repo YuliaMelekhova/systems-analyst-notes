@@ -47,6 +47,7 @@ The matrix is a starting position for a conversation with counsel. It is not the
 
 ## Related Artifacts
 
+* [governance-matrix/ai-regulatory-control-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/ai-regulatory-control-matrix.csv) - Runs the other way, from an architecture control to the provisions it answers to, once these rows say which frameworks apply
 * [stride-threat-modeling/payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) - Which of the threat controls there are regulatory obligations depends on these rows
 * [knowledge-packs/iso-20022-cbpr-plus.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/iso-20022-cbpr-plus.md) - The travel rule row and the structured address deadline are the same data quality problem
 * [templates-quality-rules/readiness-rules.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/readiness-rules.md) - Regulatory traceability is one of the readiness gates a requirement has to clear
