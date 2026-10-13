@@ -1,6 +1,6 @@
 # Governance Matrix
 
-Which regulatory framework reaches which market, and where two that both apply disagree. Covers the US, Mexico, Brazil and Colombia against the EU AI Act, NIST AI RMF, ISO/IEC 42001 and 42005, LGPD, LFPDPPP, Law 1581/2012, PCI DSS and the national AML regimes.
+Which regulatory framework reaches which market, and where two that both apply disagree. Covers the US, Mexico, Brazil and Colombia against the EU AI Act, NIST AI RMF, ISO/IEC 42001 and 42005, LGPD, LFPDPPP, Law 1581/2012, PCI DSS and the national AML regimes. A second view runs the other way: it starts from an architecture control and shows which provisions it answers to.
 
 Applicability is the easy half and is findable elsewhere. The value sits in the overlap column: the point where one framework uses a different word for a control another already requires, and the point where a framework belonging to somewhere else reaches an operation here.
 
