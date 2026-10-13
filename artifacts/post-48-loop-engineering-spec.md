@@ -1,12 +1,12 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gMWAffx6-->
 
 # Loop Engineering Spec Template
 
-**Series:** Systems Analyst Notes
-**Post:** 48
-**Phase:** 6 AI Agents at Work
-**Author:** Yulia Melekhova
-**Published:** 2026
+**Series:** Systems Analyst Notes  
+**Post:** 48  
+**Phase:** 6 AI Agents at Work  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
