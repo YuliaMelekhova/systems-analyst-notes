@@ -67,6 +67,7 @@ Mermaid source, editable rather than exported.
 * [knowledge-packs/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/knowledge-packs/) - Standards and domain reference, written once and reused
 * [stride-threat-modeling/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/stride-threat-modeling/) - Threat models cross-linked to the requirements they change
 * [governance-matrix/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/governance-matrix/) - Which regulatory framework reaches which market
+* [governance-matrix/ai-regulatory-control-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/ai-regulatory-control-matrix.csv) - Justifying one AI control to several regulators, or checking what a new market already covers
 * [prompt-library/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/prompt-library/) - Analytical prompts kept as reusable references
 * [templates-quality-rules/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/templates-quality-rules/) - Artifact templates plus the rules that decide when one is ready
 
