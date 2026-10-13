@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gFm6MJjj-->
 
 # AI Agent Instruction Standard
 
