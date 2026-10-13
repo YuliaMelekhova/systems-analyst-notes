@@ -1,12 +1,12 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gGRngk5K-->
 
 # Multi-Agent Documentation Pipeline Map
 
-**Series:** Systems Analyst Notes
-**Post:** 47
-**Phase:** 6 AI Agents at Work
-**Author:** Yulia Melekhova
-**Published:** 2026
+**Series:** Systems Analyst Notes  
+**Post:** 47  
+**Phase:** 6 AI Agents at Work  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
