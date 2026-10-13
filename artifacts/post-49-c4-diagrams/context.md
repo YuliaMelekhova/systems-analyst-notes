@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gB3QJx2s-->
 
 # C4 Level 1: System Context for a Cross-Border Payment Platform
 
