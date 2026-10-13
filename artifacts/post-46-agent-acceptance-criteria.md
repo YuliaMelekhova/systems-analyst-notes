@@ -1,12 +1,12 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/g4H6bqes-->
 
 # Agent Acceptance Criteria Template
 
-**Series:** Systems Analyst Notes
-**Post:** 46
-**Phase:** 6 AI Agents at Work
-**Author:** Yulia Melekhova
-**Published:** 2026
+**Series:** Systems Analyst Notes  
+**Post:** 46  
+**Phase:** 6 AI Agents at Work  
+**Author:** Yulia Melekhova  
+**Published:** 2026  
 
 ## Purpose
 
