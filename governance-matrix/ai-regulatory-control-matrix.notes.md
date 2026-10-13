@@ -13,7 +13,7 @@ Maps eight architecture controls for an AI agent in a payment flow to relevant p
 
 ## How to Read It
 
-The file `ai-regulatory-control-matrix.csv` has one row per control and one column per law, standard, or guidance framework. Architecture controls run down the rows; regulatory and framework mappings run across the columns. A mapping can support compliance evidence without implying that a voluntary framework is legally binding.
+The file [ai-regulatory-control-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/ai-regulatory-control-matrix.csv) has one row per control and one column per law, standard, or guidance framework. Architecture controls run down the rows; regulatory and framework mappings run across the columns. A mapping can support compliance evidence without implying that a voluntary framework is legally binding.
 
 Read across a row to see which frameworks a control supports. C01, the versioned system record, has six `Mapped` cells; SR 26-2 is marked `Excluded` for the generative or agentic AI scenario covered by this artifact.
 
