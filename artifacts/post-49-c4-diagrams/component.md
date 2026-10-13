@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gB3QJx2s-->
 
 # C4 Level 3: Component Diagram for the Payment Orchestrator
 
