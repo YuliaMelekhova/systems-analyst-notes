@@ -13,7 +13,7 @@ Maps eight architecture controls for an AI agent in a payment flow to relevant p
 
 ## How to Read It
 
-The file [ai-regulatory-control-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/ai-regulatory-control-matrix.csv) has one row per control and one column per law, standard, or guidance framework. Architecture controls run down the rows; regulatory and framework mappings run across the columns. A mapping can support compliance evidence without implying that a voluntary framework is legally binding.
+The file `ai-regulatory-control-matrix.csv` has one row per control and one column per law, standard, or guidance framework. Architecture controls run down the rows; regulatory and framework mappings run across the columns. A mapping can support compliance evidence without implying that a voluntary framework is legally binding.
 
 Read across a row to see which frameworks a control supports. C01, the versioned system record, has six `Mapped` cells; SR 26-2 is marked `Excluded` for the generative or agentic AI scenario covered by this artifact.
 
@@ -79,9 +79,11 @@ Step 4: Add a ninth control only when a column asks for something no row answers
 
 ## Related Artifacts
 
+* [governance-matrix/market-framework-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/market-framework-matrix.csv) - Starts from the market and lists which frameworks reach it, the view this matrix does not carry
+* [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) - Defines the approval checkpoint and the kill switch that rows C02 and C06 map to the frameworks
 * [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) - Walks through two regimes that conflict on one transaction, the case a cross-column matrix has to carry
-* [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) - Names the owner of each service before a control is mapped to the obligations it answers
 * [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Records the decision that resolves a cross-column conflict, so the reasoning outlives the ticket
+* [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) - Names the owner of each service before a control is mapped to the obligations it answers
 * [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) - Handles the client tier where a change is mandated externally, which is what a dated column describes
 
 ---
