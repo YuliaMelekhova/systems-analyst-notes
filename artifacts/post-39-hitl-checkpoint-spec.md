@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gFUVPg93-->
 
 # Human-in-the-Loop Checkpoint and Kill Switch Specification
 
