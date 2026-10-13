@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gN-cGyGS-->
 
 # Knowledge Pack Template
 
