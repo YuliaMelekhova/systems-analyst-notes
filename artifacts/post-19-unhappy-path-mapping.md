@@ -159,6 +159,7 @@ Before finalizing any cross-border payment requirement, check each of the follow
 * [templates-quality-rules/requirement-antipatterns.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/requirement-antipatterns.md) - Success-only specification, which is this framework's absence seen from the review side
 * [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) - Blast radius per service is where unhappy paths get assigned an owner
 * [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) - The unhappy paths named here show up as alt and opt blocks on this sequence
+* [governance-matrix/ai-regulatory-control-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/ai-regulatory-control-matrix.csv) - Maps AI controls to frameworks, including the cross-regime conflicts this artifact walks through
 ---
 
 Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
