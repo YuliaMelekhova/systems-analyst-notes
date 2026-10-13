@@ -50,17 +50,15 @@ systems-analyst-notes/
 └── artifacts/
     ├── README.md                  ← task-route index, "which file for which job"
     ├── post-10-tribal-knowledge-signs.md
-    ├── post-12-knowledge-graph.md
+    ├── post-12-knowledge-graph.mmd
     ├── post-14-intake-checklist.md
-    ├── post-16-context-diagram.md
+    ├── post-16-context-diagram.mmd
     ├── post-18-discovery-framework.md
     ├── post-19-unhappy-path-mapping.md
     ├── post-21-requirement-decomposition-template.md
     ├── post-22-api-contract-template.yaml
     ├── post-23-adr-template.yaml
-    ├── post-24-changelog-template.md
-    ├── post-25-sequence-diagram.md
-    └── post-28-api-versioning-policy.md
+    └── post-24-changelog-template.md
 ```
 
 Only files that actually exist are listed. An earlier version of this guide carried a projected list of thirty filenames reaching to Post 66, and every one of them was a guess that went stale as the plan moved. The forward-looking list lives in the master plan, in the `GITHUB COMPANION ARTIFACTS` section, which is the one place it can be maintained without duplication.
@@ -72,7 +70,7 @@ The five top-level folders mirror the ADF branches from Post 7. They stay mostly
 `anti-ai-artifacts.md` defines these in full. The short version, because it decides where a file goes:
 
 * **Post artifact.** Lives in `artifacts/`, named `post-NN-slug.ext`, gets a root README row.
-* **Branch reference.** Lives in one of the five framework folders, named `descriptive-slug.ext` with no number, gets no root README row. It exists when a topic outlives the post that raised it.
+* **Branch reference.** Lives in one of the five framework folders, named `descriptive-slug.ext` with no number, gets no root README row and one row in the Standing References table of `artifacts/README.md`. It exists when a topic outlives the post that raised it.
 * **Repository-level file.** `README.md`, `CONTRIBUTING.md`, `repo-guide.md`, `artifacts/README.md`. Carries `Scope: Repository`.
 * **Folder index.** The `README.md` inside each framework folder. Navigation furniture, no header block, no footer block, and never a list of the files in its own folder.
 
@@ -84,7 +82,7 @@ The five top-level folders mirror the ADF branches from Post 7. They stay mostly
 
 * `NN` is the two-digit post number, matching the master plan exactly.
 * `short-slug` is 2 to 5 words, lowercase, hyphen separated, taken from the post title.
-* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-49-c4-diagrams/context.md`, `container.md`, `component.md`.
+* Multi-file artifacts get a folder rather than a file, same pattern, contents inside without the prefix repeated: `post-49-c4-diagrams/context.mmd`, `container.mmd`, `component.mmd`.
 * A lowercase letter appears only on the second half of a post split across two publications: `post-44a-...`. It never marks an insertion. `anti-ai-artifacts.md` has the reasoning.
 
 No dates in filenames. The post number is the permanent identifier, and dates live in the README table only.
@@ -102,12 +100,12 @@ Check before assuming otherwise: list the artifacts in `artifacts/`, take the hi
 | Content type | Extension | Example |
 |---|---|---|
 | Checklists, frameworks, specs, prose docs | `.md` | `post-18-discovery-framework.md` |
-| Diagrams (sequence, context, ER, knowledge graph, C4) | `.md`, Mermaid source in a fenced code block | `post-25-sequence-diagram.md` |
+| Diagrams (sequence, context, ER, knowledge graph, C4) | `.mmd` Mermaid source | `post-25-sequence-diagram.mmd` |
 | Matrices, decision tables, regulatory mappings | `.csv` | `post-53-regulatory-matrix.csv` |
 | API contracts, structured records, anything queryable | `.yaml` | `post-22-api-contract-template.yaml` |
 | Multi-part artifacts | folder of the above | `post-54-seven-techniques-password-reset/` |
 
-Diagrams go in as Mermaid source rather than exported images. A standalone `.mmd` file does not render reliably in GitHub's file preview. A fenced ` ```mermaid ` code block inside a `.md` file does, so the diagram lives in `.md` with the header and footer block same as any other post artifact. Posts 12 and 16 were rebuilt on this basis after the `.mmd` version rendered incorrectly. A multi-file diagram artifact is a folder of `.md` files, each with its own fenced block, for example `post-49-c4-diagrams/context.md`. `.mmd` is used only when a file is consumed by tooling and never opened on GitHub.
+Diagrams go in as Mermaid source rather than exported images. GitHub renders `.mmd` natively in the file preview, and the artifact stays editable instead of becoming a flattened picture.
 
 The `.yaml` row widened after Post 23. A structured record that a rule can validate or a query can reach belongs in YAML even when it reads like prose, because the format is what makes it more than a document. An ADR is the worked example: the same content as markdown can only be read.
 
@@ -140,7 +138,7 @@ The root `README.md` is itself the Post 7 artifact. It has two jobs:
 
 Update the table every time a `[GitHub]`-tagged post ships. Nothing else changes, since the five-branch section is written once and stays fixed.
 
-`artifacts/README.md` does a different job and needs its own update when a route changes. The root index answers what the series has published. The artifacts index answers which file to open for the task in hand.
+`artifacts/README.md` does a different job and needs its own update when a route changes or a standing reference is added. The root index answers what the series has published. The artifacts index answers which file to open for the task in hand.
 
 The folder name `templates-quality-rules/` uses a hyphen because folder names cannot carry spaces. Everywhere the branch is named in prose, in a header, or in the root README, it is written `Templates and Quality Rules` with the word.
 
