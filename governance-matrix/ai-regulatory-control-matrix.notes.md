@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Maps eight architecture controls for an AI agent in a payment flow to relevant provisions and control objectives across seven regulatory and voluntary frameworks. Use it when one control needs supporting evidence for several regimes, or when a new market is added and the team needs to identify which existing controls already address its requirements.
+Maps eight architecture controls for an AI agent in a payment flow to relevant provisions and control objectives across eight regulatory and voluntary frameworks. Use it when one control needs supporting evidence for several regimes, or when a new market is added and the team needs to identify which existing controls already address its requirements.
 
 ---
 
@@ -15,13 +15,15 @@ Maps eight architecture controls for an AI agent in a payment flow to relevant p
 
 The file `ai-regulatory-control-matrix.csv` has one row per control and one column per law, standard, or guidance framework. Architecture controls run down the rows; regulatory and framework mappings run across the columns. A mapping can support compliance evidence without implying that a voluntary framework is legally binding.
 
-Read across a row to see which frameworks a control supports. C01, the versioned system record, has six `Mapped` cells; SR 26-2 is marked `Excluded` for the generative or agentic AI scenario covered by this artifact.
+Read across a row to see which frameworks a control supports. C01, the versioned system record, has seven `Mapped` cells; SR 26-2 is marked `Excluded` for the generative or agentic AI scenario covered by this artifact.
 
 Read down a column to compare what a source directly addresses and where a control has no direct match. In the Colombia column, C02 (fixed human approval checkpoint) is `Unmapped`, while C07 (customer review route) is `Mapped` to transparency and information rights, supplemented by the regulator's 2024 AI circular. The circular does not, by itself, create a direct fixed-approval-checkpoint provision for C02 in the matrix.
 
 Every control row assumes a generative or agentic system. SR 26-2 explicitly excludes those models from its scope. Other model types must be assessed against the guidance separately; the `Excluded` label is not a general exemption from institutional risk governance.
 
-**Visual summary:** The LinkedIn image shows six selected controls (C01, C02, C04–C07). The CSV contains all eight, including C03 (decision log) and C08 (personal-data masking).
+The FSB column is the one source that covers all types of AI and describes agent-specific practices as still nascent. It draws no exclusion, so it carries `Mapped` cells in the rows where SR 26-2 carries `Excluded`.
+
+**Visual summary:** The LinkedIn image shows six selected controls (C01, C02, C04–C07) across seven frameworks. The CSV contains all eight controls, including C03 (decision log) and C08 (personal-data masking), and adds the FSB column published after the image.
 
 ---
 
@@ -52,12 +54,15 @@ Each column has one of four lifecycle statuses: **in force**, **adopted but not 
 | Brazil LGPD | In force | Law 13.709 of 2018, applying since September 2020 |
 | Mexico LFPDPPP | In force | New law effective March 21, 2025, replacing the 2010 law. Supervision moved from INAI to the Secretariat of Anti-Corruption and Good Governance |
 | Colombia Law 1581 | In force | Law 1581 of 2012. SIC External Circular 002 of August 21, 2024 applies to personal data in AI systems |
+| FSB Sound Practices | In force (voluntary, nonbinding guidance) | Final report published October 15, 2026, replacing the June 10, 2026 consultation report. Twelve practices, non-prescriptive, not a binding international standard, and no replacement for local legal obligations. Agent-specific practices are described as nascent. Source: https://www.fsb.org/uploads/P151026-1.pdf |
 
 ---
 
 ## Scope and Verification
 
 Cells were drafted from the framework texts and from law-firm summaries of the 2025 and 2026 changes. ISO/IEC 42001 Annex A numbers and NIST AI RMF 1.0 subcategory numbers were checked against published crosswalks and official-text mirrors. Check EU AI Act, LGPD and Law 1581 article numbers against the primary texts before quoting a cell in a compliance file.
+
+FSB cells cite sound practice and report section numbers. The final report was read in full through section 3.4 (sound practices 1 to 7). Sections 3.5 to 3.9 (sound practices 8 to 12) could not be retrieved in full, so the cells that rest on them (C02, C05, C06, C07, and the SP 11 reference in C04) use the June 10 consultation wording or the section titles. Check those against the final text before quoting them.
 
 Mexico's cells cite topics rather than articles, because the 2025 article numbering has not been checked against the Official Gazette text.
 
@@ -79,11 +84,9 @@ Step 4: Add a ninth control only when a column asks for something no row answers
 
 ## Related Artifacts
 
-* [governance-matrix/market-framework-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/market-framework-matrix.csv) - Starts from the market and lists which frameworks reach it, the view this matrix does not carry
-* [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) - Defines the approval checkpoint and the kill switch that rows C02 and C06 map to the frameworks
 * [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) - Walks through two regimes that conflict on one transaction, the case a cross-column matrix has to carry
-* [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Records the decision that resolves a cross-column conflict, so the reasoning outlives the ticket
 * [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) - Names the owner of each service before a control is mapped to the obligations it answers
+* [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Records the decision that resolves a cross-column conflict, so the reasoning outlives the ticket
 * [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) - Handles the client tier where a change is mandated externally, which is what a dated column describes
 
 ---
