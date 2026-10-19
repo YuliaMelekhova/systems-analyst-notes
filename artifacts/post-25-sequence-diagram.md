@@ -86,6 +86,7 @@ sequenceDiagram
 * [artifacts/post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) - Worked example: this diagram is one of the artifacts a Knowledge Pack workflow produced from a transcribed architecture review, not from a spec written for its own sake
 * [artifacts/post-49-c4-diagrams/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-49-c4-diagrams/) - Opens the Payment Orchestrator these arrows hit, at container and component level
 * [artifacts/post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) - Draws a similar flow in swim lanes, for when who-waits matters more than message order
+* [artifacts/post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) - Turns the screening branch that gets no answer into a rule table with a named owner   
 ---
 
 Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
