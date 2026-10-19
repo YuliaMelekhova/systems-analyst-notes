@@ -146,7 +146,7 @@ A change that fails check 3 is the one that ships successfully, passes every tes
 * [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Where a deprecation decision is recorded at stage 1, before any client hears about it
 * [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) - Shows which participants a versioned response reaches, which is how the client tier list gets built
 * [artifacts/post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) - The regulator-scheduled changes this policy's client-tier table does not get to schedule
-
+* [artifacts/post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) - Section 10 applies the new enum value case to a needs_review outcome
 ---
 
 Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
