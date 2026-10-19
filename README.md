@@ -57,6 +57,7 @@ decide when a document is ready for review.
 | 49 | C4 Diagram Set: Cross-Border Payment Platform | Phase 6 AI Agents at Work | [artifacts/post-49-c4-diagrams/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-49-c4-diagrams/) |
 | 50 | Four Levels of Documentation | Phase 6 AI Agents at Work | [artifacts/post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) |
 | 56 | Seven Ways to Document One Requirement | Phase 7 Process, Compliance and Fintech Reality | [artifacts/post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) |
+| 58 | Decision Table Template | Phase 7 Process, Compliance and Fintech Reality | [artifacts/post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
