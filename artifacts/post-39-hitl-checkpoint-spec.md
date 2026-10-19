@@ -111,7 +111,7 @@ A spec that fails check 2 is the one that ships, passes review, and cannot actua
 
 * [artifacts/post-25-sequence-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.mmd) - Shows the live cross-service call a checkpoint would sit inside, before the tier is assigned
 * [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Where the kill switch trigger decision gets recorded once the two thresholds are set
-
+* [artifacts/post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) - Gives a needs_review outcome its owner and the message the customer sees while it waits
 ---
 
 Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
