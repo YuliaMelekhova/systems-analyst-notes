@@ -45,6 +45,10 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Documenting one requirement for several audiences.** [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) writes the same requirement seven ways, one per reader.
 
+**Letting an assistant answer from a written policy.** [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) turns each rule into a row with a condition, an evidence source, an outcome and an owner. Missing evidence returns needs_review instead of a guess, so application code decides and the model only explains.
+
+**Two teams use the same word differently.** [post-60-cross-functional-glossary.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-60-cross-functional-glossary.csv) holds one row per meaning of a shared word, each with its own name, owner and the rows it conflicts with. Read its [notes file](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-60-cross-functional-glossary.notes.md) first for the review gate. [cross-border-payments-glossary.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/cross-border-payments-glossary.md) covers payment terms that are ambiguous across standards and markets, so check it before adding a row.
+
 **Finding which rules reach a market.** [market-framework-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/market-framework-matrix.csv) starts from the market and lists the frameworks that apply, and where two of them disagree. Read its notes file first.
 
 **Justifying one AI control to several regulators.** [ai-regulatory-control-matrix.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/governance-matrix/ai-regulatory-control-matrix.csv) starts from the control and lists the provisions it answers to, so one piece of evidence can be cited more than once.
@@ -84,6 +88,7 @@ Files with a fixed shape to copy and fill in. The two YAML files are structured 
 | [post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) | Five columns that record what changed in a requirement and why |
 | [post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) | A Knowledge Pack built from a raw source, with the metadata retrieval needs |
 | [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) | One requirement written seven ways, with the maintenance rule that keeps them in step |
+| [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) | A rule table where every rule has a condition, an evidence source and an outcome, with needs review as a third result |
 
 ### Policies and registers
 
@@ -93,6 +98,7 @@ Files that settle a rule once, or track rows that change over time.
 |---|---|
 | [post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) | What counts as a breaking change, and the notice a client gets |
 | [post-29-mandated-change-register.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-29-mandated-change-register.csv) | Regulatory obligations that change an API on someone else's schedule |
+| [post-60-cross-functional-glossary.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-60-cross-functional-glossary.csv) | Which meaning of a shared word each team uses, with one owner per meaning |
 
 ### Agent specifications
 
