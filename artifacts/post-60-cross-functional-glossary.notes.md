@@ -16,7 +16,7 @@ Records every meaning a shared word carries across functions, with one owner and
 
 ## What the CSV holds
 
-`post-60-cross-functional-glossary.csv` has one row per meaning, not one row per term. A word with three live meanings has three rows. The worked example covers four terms from a cross-border payments platform: settled, customer, approved and active, three meanings each.
+[artifacts/post-60-cross-functional-glossary.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-60-cross-functional-glossary.csv) has one row per meaning, not one row per term. A word with three live meanings has three rows. The worked example covers four terms from a cross-border payments platform: settled, customer, approved and active, three meanings each.
 
 | Column | What goes in it |
 |---|---|
