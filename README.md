@@ -59,6 +59,9 @@ decide when a document is ready for review.
 | 56 | Seven Ways to Document One Requirement | Phase 7 Process, Compliance and Fintech Reality | [artifacts/post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) |
 | 58 | Decision Table Template | Phase 7 Process, Compliance and Fintech Reality | [artifacts/post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) |
 | 60 | Cross-Functional Glossary | Phase 8 Scaling | [artifacts/post-60-cross-functional-glossary.csv](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-60-cross-functional-glossary.csv) |
+| 62 | Payment Platform ER Diagram | Phase 8 Scaling | [artifacts/post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) |
+| 63 | AI-Assisted Onboarding Playbook | Phase 8 Scaling | [artifacts/post-63-onboarding-playbook.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-63-onboarding-playbook.md) |
+| 64 | Documentation Pyramid | Phase 8 Scaling | [artifacts/post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
