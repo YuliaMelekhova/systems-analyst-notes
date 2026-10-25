@@ -187,6 +187,7 @@ The claim check follows Dhuliawala and colleagues, "Chain-of-Verification Reduce
 * [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) - The payee verification result there is a multi-value outcome field defined as a contract, which is where a third state gets declared
 * [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) - Section 4 decides whether adding a new outcome value breaks existing clients
 * [artifacts/post-25-sequence-diagram.mmd](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.mmd) - The screening branch that gets no answer is this three-outcome pattern drawn as a conversation
+* [artifacts/post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) - Where each fact a rule needs is stored, and who writes it
 
 ---
 
