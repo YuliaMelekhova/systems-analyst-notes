@@ -35,6 +35,8 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Turning a meeting or a document into a knowledge base entry.** [post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) sets the shape and the required metadata. [cross-border-payments-glossary.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/cross-border-payments-glossary.md) covers the payment terms that mean different things to different reviewers.
 
+**Onboarding a new analyst next to an AI assistant.** [post-63-onboarding-playbook.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-63-onboarding-playbook.md) sets four stages, the assistant's settings per stage and an unaided checkpoint.
+
 **Specifying a payment flow.** [iso-20022-cbpr-plus.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/iso-20022-cbpr-plus.md) covers what the November 14, 2026 address requirement changes in the data model and the API contract. [payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) is a worked threat pass over one flow, to copy as a shape.
 
 **Putting an AI agent into production.** Start with [post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) for the seven fields and the pre-launch checklist. Then [post-46-agent-acceptance-criteria.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-46-agent-acceptance-criteria.md) sets the shipping threshold per task type, and [post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) places the human checkpoints and the kill switch.
@@ -43,7 +45,11 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Deciding where a document belongs.** [post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) sorts it by the question it answers, which also decides its owner and review trigger.
 
+**Deciding what to document first.** [post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) orders four layers from shared language up to evidence, and its citation test shows which layer is thin. [post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) then places each page.
+
 **Documenting one requirement for several audiences.** [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) writes the same requirement seven ways, one per reader.
+
+**Finding where each fact a rule needs is stored.** [post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) gives eight entities and the questions to settle before build. A rule row from [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) points at the box that holds its facts.
 
 **Letting an assistant answer from a written policy.** [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) turns each rule into a row with a condition, an evidence source, an outcome and an owner. Missing evidence returns needs_review instead of a guess, so application code decides and the model only explains.
 
@@ -75,6 +81,8 @@ Files that describe a sequence to run.
 | [post-18-discovery-framework.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-18-discovery-framework.md) | A discovery pass with entry and exit criteria per step |
 | [post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) | Specified behavior for the paths that are not the happy one |
 | [post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) | A level, a reader, an owner and a review trigger for any document |
+| [post-63-onboarding-playbook.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-63-onboarding-playbook.md) | Four onboarding stages, each with assistant settings and an unaided checkpoint |
+| [post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) | A build order for documentation, with a citation test per layer |
 
 ### Templates
 
@@ -122,6 +130,7 @@ Mermaid source, editable rather than exported.
 | [post-16-context-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-16-context-diagram.md) | A system boundary with its external actors |
 | [post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) | One payment as a timed conversation between services, with the branches and retries |
 | [post-49-c4-diagrams/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-49-c4-diagrams/) | A payment platform at context, container and component level |
+| [post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) | The data behind a payment platform's rules, with the cardinality each line commits to |
 
 ---
 
