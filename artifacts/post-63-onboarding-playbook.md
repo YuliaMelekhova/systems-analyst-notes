@@ -10,17 +10,19 @@
 
 ## Purpose
 
-Sets the shape of an onboarding plan for new analysts who work next to an AI-assisted knowledge base, with the assistant's settings and an unaided checkpoint at every stage. Reach for it before the first new hire gets access to the assistant.
+Sets the shape of an onboarding plan for new analysts who work next to an AI-assisted knowledge base, with the assistant's settings, a feedback log and an unaided checkpoint at every stage. Reach for it before the first new hire gets access to the assistant.
 
 ---
 
-## 1. Why it measures two things
+## 1. Why it measures three things
 
-A knowledge base earns its keep on containment: the share of routine questions answered without a senior colleague's time. That number says nothing about whether the new analyst can reason through an ambiguous requirement alone, so the playbook reports it next to an unaided checkpoint.
+A knowledge base earns its keep on containment: the share of routine questions answered without a senior colleague's time. That number says nothing about whether the new analyst can reason through an ambiguous requirement alone, and it hides the difference between a full answer and a partial one. The playbook therefore reports it next to a feedback split and an unaided checkpoint.
 
 A field experiment published in PNAS in 2025 gives the mechanism a measured shape. Nearly a thousand high school math students practiced with a GPT-4 tutor. Those with a plain chat assistant scored 48% higher on practice problems, then 17% lower than a no-AI group on the exam once the assistant was removed. Most of them had asked for the answer. A second group used the same assistant set to give hints and loaded with common student mistakes. They scored 127% higher in practice, and their exam results matched the no-AI group.
 
 The study covered one school and one subject. Treat it as a mechanism to test on your own team, not as a result to cite.
+
+The feedback split comes from Uber's engineering write-up of Genie, its internal assistant for support questions. Every answer carries one of four marks: Resolved, Helpful, Not Helpful or Not Relevant. The split separates a full answer from partial help, and a wrong answer from a question the assistant was never meant to take. Genie also evaluates the pages it answers from, which turns each bad answer into a note about a page.
 
 ---
 
@@ -45,8 +47,11 @@ The map says what the knowledge base holds and which questions it refuses. A new
 |---|---|
 | Sources held | Each source type, its owner and its review date |
 | Questions it answers | Lookups with a written source: where a decision is recorded, which rule applies, who owns a service |
-| Questions it refuses | Anything that needs judgment, and anything whose source is missing or out of date |
+| Questions it refuses | Anything whose source is missing or out of date, and anything the map does not list |
+| Always for a person | Categories decided in advance: a judgment call on an ambiguous requirement, a conflict between two sources, anything that touches a date or a commitment someone else set |
 | Owner | `[KB_OWNER]`, named, with a date for the next review of the map |
+
+The "Always for a person" row is where judgment-heavy work stays with a person on purpose. When the assistant meets one of those questions, it says so, names the owner and stops. Those questions get the mark Not Relevant in section 6, and they are the design counterpart of stage 2: a ticket the assistant never touches is the only way to find out whether the new hire can do it alone.
 
 ---
 
@@ -90,7 +95,47 @@ Add an entry each time a senior analyst corrects the same thing twice.
 
 ---
 
-## 6. Chapter 4: Checkpoint
+## 6. Feedback marks and the answer log
+
+Every answer the assistant gives carries four buttons, and every answer is written to a log. The log is what makes the feedback split and the page notes possible.
+
+| Mark | Meaning | What it tells you |
+|---|---|---|
+| `Resolved` | The answer fully solved the question | The page and the retrieval both worked |
+| `Helpful` | The answer helped, and more was needed | The page covers the topic only in part |
+| `Not Helpful` | The answer was wrong or off target | A weak page, or a retrieval miss |
+| `Not Relevant` | The question needed a person, and the assistant could not help | The question belongs on the "Always for a person" list |
+
+### The answer log
+
+One row per answer, written when the answer is given.
+
+| Field | What to record |
+|---|---|
+| Question and stage | The question as asked, and the new hire's current stage |
+| Source page | The page identifier and the revision the answer was built from |
+| Answer | What the assistant returned |
+| Mark | One of the four marks, or none |
+| Escalated | Whether a person took over, and who |
+
+The revision is the field that gets skipped. A page score and an answer score refer to the same version only when both carry the revision, and without it a fixed page makes yesterday's bad answer look like today's.
+
+### Pages that cause bad answers
+
+Every `[REPORT_PERIOD]`, `[KB_OWNER]` takes the pages behind Not Helpful marks and escalations and checks four things.
+
+| Check | A failing page looks like |
+|---|---|
+| Prerequisites | It assumes knowledge it never states |
+| Owner and review date | Either is missing, or the date has passed |
+| Status | Draft or superseded text sits next to current text |
+| Scope | Several topics share one page, so retrieval returns the wrong part |
+
+A page that fails goes back to its owner with the answers that exposed it attached.
+
+---
+
+## 7. Chapter 4: Checkpoint
 
 One unaided task at the end of each stage. The new hire works with the assistant switched off, and `[REVIEWER]` reviews the result against a written rubric.
 
@@ -105,9 +150,9 @@ The reviewer records pass or revisit, plus one sentence on what the analyst miss
 
 ---
 
-## 7. Reading the two measures together
+## 8. Reading the three measures together
 
-Containment comes from the knowledge base logs. The checkpoint result comes from chapter 4. Read them as a pair every `[REPORT_PERIOD]`.
+Containment and the feedback split come from the answer log in section 6. The checkpoint result comes from chapter 4. Read containment and the checkpoints as a pair every `[REPORT_PERIOD]`, then read the feedback split against them.
 
 | Containment | Checkpoints | What it usually means | Action |
 |---|---|---|---|
@@ -116,16 +161,26 @@ Containment comes from the knowledge base logs. The checkpoint result comes from
 | Low | Passing | The knowledge base has gaps | Fix the map and the sources |
 | Low | Failing | The onboarding itself is thin | Review chapters 1 and 2 |
 
+The feedback split explains the cells above. Four patterns to look for:
+
+| Pattern in the marks | What it usually means | Action |
+|---|---|---|
+| Helpful outnumbers Resolved on the same pages | The pages cover part of the topic | Add the missing step or example to those pages |
+| Not Helpful clusters on a few pages | Weak pages, rather than a weak new hire | Send the pages to their owners with the answers attached |
+| Not Relevant on questions the map says it answers | The map is out of date, or retrieval is missing the page | Fix the map and the page |
+| Almost no Not Relevant while checkpoints fail | Judgment questions are being handed to the assistant | Test that the "Always for a person" list is enforced |
+
 ---
 
-## 8. Review gate
+## 9. Review gate
 
-Four checks before the first new hire starts. The second is the one that catches a misconfigured assistant.
+Five checks before the first new hire starts. The second is the one that catches a misconfigured assistant.
 
-1. Does every source in the map have an owner and a review date?
+1. Does every source in the map have an owner and a review date, and is the "Always for a person" list written?
 2. Has each assistant mode been tested with a direct request for the answer, and does Hint mode decline and ask a question instead?
 3. Are the hand-worked tickets chosen, each with a precedent the new hire can find?
 4. Is the checkpoint reviewer named, and is the rubric written?
+5. Does the answer log record the page revision next to every answer, and do all four marks reach it?
 
 ---
 
