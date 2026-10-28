@@ -1,4 +1,4 @@
-<!-- LinkedIn: -->
+<!-- LinkedIn: https://lnkd.in/p/gQVfz_2F-->
 
 # Payment Platform ER Diagram
 
@@ -93,7 +93,7 @@ Each end of a line carries a symbol that says how many records sit on that side.
 | `\|\|` | Exactly one | A payment belongs to exactly one account |
 | `o\|` | Zero or one | An evaluation opens zero or one review case |
 | `o{` | Zero or many | An account funds zero or many payments |
-| `PK`, `FK`, `UK` | Primary key, foreign key, unique key | `idempotency_key` is unique across payments |
+| `PK`, `FK`, `UK` | Primary key, foreign key, unique key | `idempotency_key` is unique within its scope (see question 2) |
 
 ---
 
@@ -131,7 +131,7 @@ A dashboard reads `delivered`. Engineering reads `partner_confirmed`. Finance re
 
 **Question 1: Where does each fact a rule needs live?** For every fact in the rule table, name the entity and the system that writes it. A fact with no box is a requirement gap.
 
-**Question 2: What makes a payment unique?** `idempotency_key` is marked unique. Decide the scope (per client, per account, per day) and what a second submission returns.
+**Question 2: What is the idempotency key unique across?** `idempotency_key` is marked unique in the diagram to keep it readable. In the spec, give it a scope. A common choice is the tenant (or account), plus the operation, plus the key, so the same key from a different customer or a different action cannot collide. Then decide what a repeat returns. The same key with the same payload returns the original response, so a retry looks like the first call. The same key with a different payload is rejected with a conflict (409 or 422) and is not run, since it usually means a client bug or a reused key. To tell the two apart, store a hash of the request next to the key.
 
 **Question 3: What happens when the partner bank confirms twice?** Decide whether a repeat confirmation creates a second event row or is dropped, and which field detects it.
 
@@ -146,7 +146,7 @@ Rename the entities to yours and keep four things:
 * Separate event rows for each meaning of a shared word, with a writer recorded on every event
 * A version on every rule evaluation
 * The third outcome, `needs_review`, with a case that names the missing fact and an owner
-* One `UK` key that makes a retried request safe to repeat
+* One `UK` key, scoped to tenant and operation, that makes a retried request safe to repeat
 
 Replace `CUSTOMER` with the meaning your rules use. The glossary lists three, and a model that picks none of them will drift.
 
