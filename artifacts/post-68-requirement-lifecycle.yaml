@@ -1,0 +1,284 @@
+# LinkedIn:
+#
+# Requirement Lifecycle State Machine
+#
+# Series: Systems Analyst Notes
+# Post: 68
+# Phase: 9 Reflection
+# Author: Yulia Melekhova
+# Published: 2026
+#
+# Purpose
+# Fixes the states a requirement moves through, who may make each move, what has to be
+# true before the move, and what moves with it. Reach for it when a requirement can be
+# approved without anyone being able to say who builds it, or when a rewritten
+# requirement leaves older copies of itself behind.
+#
+# Why a state machine and not a status field
+# A status field anyone can edit records an opinion. A transition with a guard records
+# that something was true when the state changed. The guard is where the thread usually
+# breaks: an approved requirement with no delivery link, a split with no parent, an
+# owner who changed in a hallway. Each of those is a missing guard, and each guard
+# below is a check a person or a script can run.
+#
+# HOW TO USE IT
+#   One record per requirement, carrying the fields under "record_fields".
+#   A state change is made by the role in "movers" and only when every guard passes.
+#   Every state change that touches scope, a value or an owner earns a row in the
+#   change log (artifacts/post-24-changelog-template.md).
+#   Values under "values_set_once" are decided once for the whole requirement set.
+#
+# MERGE GATE, run before a changed record is committed
+#   1. status is one of draft, in_review, approved, implemented, superseded, archived.
+#   2. owner is a named person. A team name is not an owner.
+#   3. An approved record names its approver and links the change log row.
+#   4. An approved record older than delivery_link_days has a delivery_link.
+#   5. A superseded record names every replacement, and each replacement lists the
+#      superseded record as its parent, in the same commit.
+
+spec:
+  name: requirement-lifecycle
+  version: 1.0
+  applies_to: one requirement record
+  readiness_gates: templates-quality-rules/readiness-rules.md
+
+values_set_once:
+  delivery_link_days: 10     # working days an approved requirement may sit with no delivery link
+  review_interval_days: 180  # days before an approved or implemented record is flagged for review
+  # Starting values, a place to begin. Set both once and write the choice in the change log.
+
+states:
+  draft:
+    owner_role: author
+    meaning: Being written. No dependency should be built on it.
+    editable: true
+  in_review:
+    owner_role: reviewer
+    meaning: A reviewer holds it. Author edits pause so nobody reviews a moving document.
+    editable: false
+  approved:
+    owner_role: approver
+    meaning: Review complete. Safe to build against. Never reverts to draft.
+    editable: false
+    carries_duty: A delivery_link within delivery_link_days.
+  implemented:
+    owner_role: delivery_lead
+    meaning: Built and verified. The record now describes what shipped.
+    editable: false
+  superseded:
+    owner_role: owner
+    meaning: Replaced by one or more records. Stays readable. The replacements are named.
+    terminal: true
+  archived:
+    owner_role: owner
+    meaning: Retired with no replacement. The reason is recorded.
+    terminal: true
+
+transitions:
+  - id: T1
+    from: draft
+    to: in_review
+    mover: author
+    guards:
+      - The five readiness gates have passed.
+      - owner is a named person.
+    effects:
+      - reviewer is recorded on the record.
+  - id: T2
+    from: in_review
+    to: draft
+    mover: reviewer
+    guards:
+      - The returned gate or comment is named in the return note.
+    effects:
+      - The record is editable again. No change log row, since no approved text moved.
+  - id: T3
+    from: in_review
+    to: approved
+    mover: approver
+    guards:
+      - approver is a named person. If the approver is also the author, approver_is_author is true.
+      - Acceptance criteria are present and each one can fail.
+      - A change log row is linked.
+    effects:
+      - The delivery_link clock starts.
+      - active is set to true on this version.
+  - id: T4
+    from: approved
+    to: implemented
+    mover: delivery_lead
+    guards:
+      - delivery_link points at the epic or ticket that carried the work.
+      - merge_link points at the merged change.
+      - test_evidence names a test for every acceptance criterion.
+    effects:
+      - The change log row records what shipped, if it differs from what was approved.
+  - id: T5
+    from: [approved, implemented]
+    to: superseded
+    mover: owner
+    guards:
+      - replaced_by lists at least one record id.
+      - Each replacement lists this record under parent.
+      - Each replacement has reached approved, or is approved in the same change.
+    effects:
+      - active is set to false on this version in the same change that sets it to true on the replacement.
+      - Every item under dependants is marked stale.
+      - A change log row names the reason for the replacement.
+    note: A split is a supersession by several records. One parent, several children, all linked in both directions.
+  - id: T6
+    from: [draft, in_review, approved, implemented]
+    to: archived
+    mover: owner
+    guards:
+      - A reason is recorded.
+      - No replacement exists. If one does, use T5.
+    effects:
+      - active is set to false.
+      - Every item under dependants is marked stale.
+      - A change log row records the reason.
+  - id: T7
+    event: revise_approved
+    from: [approved, implemented]
+    to: draft
+    mover: author
+    guards:
+      - The change would alter scope, a requirement, an interface or an acceptance criterion.
+    effects:
+      - A new record version is created at draft with replaces pointing at the approved one.
+      - The approved version stays readable and stays active until the new version is approved.
+      - On approval of the new version, T5 runs on the old one in the same change.
+    note: Approved never reverts to draft. A change produces a new version at draft.
+  - id: E1
+    event: owner_change
+    applies_to: any state except superseded and archived
+    mover: outgoing owner, or the approver if the owner has left
+    guards:
+      - The new owner is a named person and has acknowledged the record.
+    effects:
+      - A change log row names the old owner, the new owner and the date.
+      - Open delivery links are reassigned to the new owner.
+    note: The second place threads break. An owner told in a hallway is an owner nobody recorded.
+
+flags:
+  - id: F1
+    name: orphaned_approved
+    raised_when: Status is approved, delivery_link is empty, and delivery_link_days have passed.
+    raised_to: approver
+    clears_when: delivery_link is set, or the record moves through T5 or T6.
+  - id: F2
+    name: review_due
+    raised_when: reviewed is older than review_interval_days on an approved or implemented record.
+    raised_to: owner
+    clears_when: reviewed is updated, with a change log row if anything changed.
+  - id: F3
+    name: stale_dependant
+    raised_when: A record moves through T5 or T6 and an item under dependants still carries its old version.
+    raised_to: owner of the dependant
+    clears_when: The dependant is regenerated from the active version, or retired.
+
+record_fields:
+  id: REQ-0000
+  title: Short declarative statement of the requirement
+  status: draft              # draft | in_review | approved | implemented | superseded | archived
+  active: false              # true on exactly one version of a requirement at a time
+  version: 1.0
+  owner:                     # a named person
+  approver:                  # empty until T3
+  approver_is_author: false
+  reviewer:
+  reviewed:                  # date of the last review
+  parent:                    # id of the record this one was split from, if any
+  replaces:                  # id of the earlier version this one revises, if any
+  replaced_by: []            # ids, filled at T5
+  delivery_link:             # epic or ticket
+  merge_link:                # filled at T4
+  test_evidence: []          # one entry per acceptance criterion
+  dependants: []             # every copy made from this record: summaries, retrieval chunks, stored answers, test cases, tickets
+  changelog: artifacts/post-24-changelog-template.md
+
+dependants_rule: >
+  Every derived copy carries requirement_id and requirement_version. A copy that names a
+  version no longer active is stale by definition. This is the active-version flag from
+  the pipeline map (artifacts/post-47-automation-pipeline-map.md) applied to the
+  requirement itself, and the reason T5 sets the old flag and the new flag in one change.
+
+movers:
+  author:        [T1, T7]
+  reviewer:      [T2]
+  approver:      [T3]
+  delivery_lead: [T4]
+  owner:         [T5, T6, E1]
+
+# ---------------------------------------------------------------------------
+# WORKED EXAMPLE
+# One settlement retry requirement splits into four corridor requirements.
+# Genericized. The corridors and limits are illustrative.
+# ---------------------------------------------------------------------------
+example:
+  before:
+    id: REQ-0142
+    title: Failed settlements are retried up to 3 times
+    status: approved
+    active: true
+    owner: Settlement service lead
+    delivery_link: PAY-318
+  event: A bank in one corridor confirms intermittent timeouts on its side. The limit has to differ by corridor.
+  after:
+    - id: REQ-0142
+      status: superseded
+      active: false
+      replaced_by: [REQ-0171, REQ-0172, REQ-0173, REQ-0174]
+      dependants_marked_stale:
+        - Retry summary in the integration guide
+        - Two retrieval chunks of the integration spec
+        - Stored support answer "settlements are retried 3 times"
+    - id: REQ-0171
+      title: Mexico corridor settlements are retried up to 5 times
+      status: approved
+      active: true
+      parent: REQ-0142
+      delivery_link: PAY-402
+    - id: REQ-0172
+      title: Brazil corridor settlements are retried up to 3 times
+      status: approved
+      active: true
+      parent: REQ-0142
+      delivery_link: PAY-403
+    - id: REQ-0173
+      title: Colombia corridor settlements are retried up to 3 times
+      status: approved
+      active: true
+      parent: REQ-0142
+      delivery_link: PAY-404
+    - id: REQ-0174
+      title: US corridor settlements are retried up to 3 times
+      status: approved
+      active: true
+      parent: REQ-0142
+      delivery_link: PAY-405
+  changelog_row: >
+    2026-09-02 | REQ-0142 split into four corridor requirements, Mexico raised to 5 |
+    Mexico corridor bank confirmed intermittent timeouts on their side | Compliance lead,
+    after the August incident review | REQ-0171 to REQ-0174, PAY-402 to PAY-405, settlement
+    service config, three stale dependants regenerated
+
+# Related Artifacts
+#   templates-quality-rules/readiness-rules.md
+#     The five gates guard T1, and the status values there are the ones used here
+#     https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/readiness-rules.md
+#   artifacts/post-24-changelog-template.md
+#     Where every transition that moves scope, a value or an owner leaves its row
+#     https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md
+#   artifacts/post-23-adr-template.yaml
+#     The record of why a requirement was replaced, when the reason is a decision
+#     https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml
+#   artifacts/post-47-automation-pipeline-map.md
+#     The active-version flag that dependants inherit when a requirement is superseded
+#     https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-47-automation-pipeline-map.md
+#   artifacts/post-58-decision-table-template.md
+#     A rule row that cites a requirement id turns stale when that requirement is superseded
+#     https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md
+#
+# Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
+# LinkedIn · https://www.linkedin.com/in/yuliamelekhova
