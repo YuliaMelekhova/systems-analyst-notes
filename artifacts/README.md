@@ -47,6 +47,10 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Deciding what to document first.** [post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) orders four layers from shared language up to evidence, and its citation test shows which layer is thin. [post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) then places each page.
 
+**Deciding what to build next in a new function.** [post-67-function-build-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-67-function-build-map.md) orders six stages from shared language to agents, each with a test a stranger can run.
+
+**An approved requirement that never got built, or a split that left no trace.** [post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) fixes the six states, who may make each move and the guard on it. [post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) records the owner changes and replacements.
+
 **Documenting one requirement for several audiences.** [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) writes the same requirement seven ways, one per reader.
 
 **Finding where each fact a rule needs is stored.** [post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) gives eight entities and the questions to settle before build. A rule row from [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) points at the box that holds its facts.
@@ -83,10 +87,11 @@ Files that describe a sequence to run.
 | [post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) | A level, a reader, an owner and a review trigger for any document |
 | [post-63-onboarding-playbook.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-63-onboarding-playbook.md) | Four onboarding stages, each with assistant settings and an unaided checkpoint |
 | [post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) | A build order for documentation, with a citation test per layer |
+| [post-67-function-build-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-67-function-build-map.md) | A build order for a systems analysis function, with an exit test per stage |
 
 ### Templates
 
-Files with a fixed shape to copy and fill in. The two YAML files are structured on purpose, so a rule can validate them and a query can reach them.
+Files with a fixed shape to copy and fill in. The three YAML files are structured on purpose, so a rule can validate them and a query can reach them.
 
 | Artifact | What it gives you |
 |---|---|
@@ -97,6 +102,7 @@ Files with a fixed shape to copy and fill in. The two YAML files are structured 
 | [post-34-knowledge-pack-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-34-knowledge-pack-template.md) | A Knowledge Pack built from a raw source, with the metadata retrieval needs |
 | [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) | One requirement written seven ways, with the maintenance rule that keeps them in step |
 | [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) | A rule table where every rule has a condition, an evidence source and an outcome, with needs review as a third result |
+| [post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) | Six requirement states, the mover and guard for each move, and what moves with a supersession |
 
 ### Policies and registers
 
