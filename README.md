@@ -62,6 +62,8 @@ decide when a document is ready for review.
 | 62 | Payment Platform ER Diagram | Phase 8 Scaling | [artifacts/post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) |
 | 63 | AI-Assisted Onboarding Playbook | Phase 8 Scaling | [artifacts/post-63-onboarding-playbook.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-63-onboarding-playbook.md) |
 | 64 | Documentation Pyramid | Phase 8 Scaling | [artifacts/post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) |
+| 67 | Systems Analysis Function Build Map | Phase 9 Reflection | [artifacts/post-67-function-build-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-67-function-build-map.md) |
+| 68 | Requirement Lifecycle State Machine | Phase 9 Reflection | [artifacts/post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
