@@ -107,6 +107,7 @@ A retriever that pulls a rule row can follow `cites` down to the definition and 
 * [artifacts/post-62-er-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-62-er-diagram.md) - A layer 2 artifact that cites the glossary rows
 * [artifacts/post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) - A layer 3 artifact that cites both layers below it
 * [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) - Layer 4 rows, each naming the rule it changed
+* [artifacts/post-67-function-build-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-67-function-build-map.md) - Applies the same bottom-up order to a whole function, with an exit test per stage
 
 ---
 
