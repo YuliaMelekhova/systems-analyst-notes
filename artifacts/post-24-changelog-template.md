@@ -88,6 +88,7 @@ Git enforces this behavior by making it impossible to change a file without leav
 * [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) - Contract changes are the ones most often assumed to be non-breaking
 * [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) - A requirement that fails intake tends to generate change rows within a sprint
 * [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) - The review gate that requires a changelog row on every breaking change
+* [artifacts/post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) - A change of owner or a supersession each earns a row here
 
 ---
 
