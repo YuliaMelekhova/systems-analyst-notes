@@ -168,6 +168,8 @@ review:
 #     relationships above are the edges the knowledge graph draws.
 #   artifacts/post-28-api-versioning-policy.md
 #     Where a deprecation ADR turns into a published notice period and sunset date
+#   artifacts/post-69-judgment-log-template.md
+#     Where a reviewer's override gets recorded next to the decision it overturned
 
 # Systems Analyst Notes · https://github.com/YuliaMelekhova/systems-analyst-notes
 # LinkedIn · https://www.linkedin.com/in/yuliamelekhova
