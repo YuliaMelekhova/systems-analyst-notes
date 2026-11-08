@@ -41,6 +41,8 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Putting an AI agent into production.** Start with [post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) for the seven fields and the pre-launch checklist. Then [post-46-agent-acceptance-criteria.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-46-agent-acceptance-criteria.md) sets the shipping threshold per task type, and [post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) places the human checkpoints and the kill switch.
 
+**Reviewing an AI output and recording how the check was done.** [post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) holds one entry per review: what the reviewer saw, what they checked outside the agent, what the output left out and why anything changed. [post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) decides which checkpoint tiers earn an entry.
+
 **Designing a multi-step agent pipeline.** [post-47-automation-pipeline-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-47-automation-pipeline-map.md) draws the coordinator and the specialist steps, and [post-48-loop-engineering-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-48-loop-engineering-spec.md) sets the stop conditions and restart rules for each step.
 
 **Deciding where a document belongs.** [post-50-four-levels-of-documentation.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-50-four-levels-of-documentation.md) sorts it by the question it answers, which also decides its owner and review trigger.
@@ -50,6 +52,8 @@ Most people arrive here mid-task. This section answers the question that brought
 **Deciding what to build next in a new function.** [post-67-function-build-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-67-function-build-map.md) orders six stages from shared language to agents, each with a test a stranger can run.
 
 **An approved requirement that never got built, or a split that left no trace.** [post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) fixes the six states, who may make each move and the guard on it. [post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) records the owner changes and replacements.
+
+**Deciding who answers for a requirement, or for an agent that touches it.** [post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) puts one accountable owner and an informed list on each requirement and sets what happens when the owner changes. [post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) fixes the states the requirement moves through, and [post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) records the handover.
 
 **Documenting one requirement for several audiences.** [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) writes the same requirement seven ways, one per reader.
 
@@ -103,6 +107,8 @@ Files with a fixed shape to copy and fill in. The three YAML files are structure
 | [post-56-seven-techniques-password-reset/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-56-seven-techniques-password-reset/) | One requirement written seven ways, with the maintenance rule that keeps them in step |
 | [post-58-decision-table-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-58-decision-table-template.md) | A rule table where every rule has a condition, an evidence source and an outcome, with needs review as a third result |
 | [post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) | Six requirement states, the mover and guard for each move, and what moves with a supersession |
+| [post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) | A log entry that records what a reviewer saw, checked outside the agent and changed |
+| [post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) | One accountable owner and an informed list per requirement, with the steps for changing the owner |
 
 ### Policies and registers
 
