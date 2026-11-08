@@ -150,7 +150,7 @@ A one-line request, decomposed.
 * [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) - Section 5 blast radius feeds directly into unhappy path mapping per service
 * [artifacts/post-22-api-contract-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-22-api-contract-template.yaml) - Every contract named in section 2 gets specified here before build
 * [artifacts/post-25-sequence-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-25-sequence-diagram.md) - The owners this template names are the lifelines in this sequence diagram
-
+* [artifacts/post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) - Gives each requirement one accountable owner once it splits across services
 ---
 
 Systems Analyst Notes · [github.com/YuliaMelekhova/systems-analyst-notes](https://github.com/YuliaMelekhova/systems-analyst-notes)
