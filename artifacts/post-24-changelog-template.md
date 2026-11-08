@@ -89,6 +89,8 @@ Git enforces this behavior by making it impossible to change a file without leav
 * [artifacts/post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) - A requirement that fails intake tends to generate change rows within a sprint
 * [artifacts/post-28-api-versioning-policy.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-28-api-versioning-policy.md) - The review gate that requires a changelog row on every breaking change
 * [artifacts/post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) - A change of owner or a supersession each earns a row here
+* [artifacts/post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) - Adds an owner and an informed list to each requirement, and records owner changes in this log
+* [artifacts/post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) - Records how an AI output was checked, for reviews where a change log row is not enough
 
 ---
 
