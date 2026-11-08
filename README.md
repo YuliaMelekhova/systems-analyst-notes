@@ -64,6 +64,8 @@ decide when a document is ready for review.
 | 64 | Documentation Pyramid | Phase 8 Scaling | [artifacts/post-64-documentation-pyramid.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-64-documentation-pyramid.md) |
 | 67 | Systems Analysis Function Build Map | Phase 9 Reflection | [artifacts/post-67-function-build-map.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-67-function-build-map.md) |
 | 68 | Requirement Lifecycle State Machine | Phase 9 Reflection | [artifacts/post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) |
+| 69 | Judgment Log Template | Phase 9 Reflection | [artifacts/post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) |
+| 72 | Requirement Ownership Template | Phase 10 New Additions | [artifacts/post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
