@@ -19,6 +19,8 @@ Most people arrive here mid-task. This section answers the question that brought
 
 **Requirement drafted, unsure what is missing.** [post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) surfaces the failure behavior, and [templates-quality-rules/requirement-antipatterns.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/requirement-antipatterns.md) covers the gaps that survive a normal review.
 
+**Turning workshop notes, features, sprint status or acceptance criteria into a first draft.** [post-76-five-analyst-prompts/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-76-five-analyst-prompts/) holds five saved prompts, each with the limits first, the sources in labeled blocks and the gaps listed instead of filled. [brd-gap-analysis.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-76-five-analyst-prompts/brd-gap-analysis.md) checks a draft before it goes to review.
+
 **Scoping a system boundary.** [post-16-context-diagram.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-16-context-diagram.md) comes first, and the trust boundaries in [stride-threat-modeling/payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) are drawn on top of it.
 
 **Inheriting an undocumented system.** [post-10-tribal-knowledge-signs.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-10-tribal-knowledge-signs.md) for where the risk sits, then [post-12-knowledge-graph.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-12-knowledge-graph.md) for mapping what connects to what.
@@ -40,6 +42,8 @@ Most people arrive here mid-task. This section answers the question that brought
 **Specifying a payment flow.** [iso-20022-cbpr-plus.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/iso-20022-cbpr-plus.md) covers what the November 14, 2026 address requirement changes in the data model and the API contract. [payment-initiation-stride.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/stride-threat-modeling/payment-initiation-stride.md) is a worked threat pass over one flow, to copy as a shape.
 
 **Putting an AI agent into production.** Start with [post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) for the seven fields and the pre-launch checklist. Then [post-46-agent-acceptance-criteria.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-46-agent-acceptance-criteria.md) sets the shipping threshold per task type, and [post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) places the human checkpoints and the kill switch.
+
+**Checking that an AI system has its governance written as requirements.** [post-74-governance-requirements-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-74-governance-requirements-checklist.md) turns eight common expectations, from inventory to vendor change, into a requirement, a test, the evidence and an owner. [post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) supplies the agent fields behind the purpose statement.
 
 **Reviewing an AI output and recording how the check was done.** [post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) holds one entry per review: what the reviewer saw, what they checked outside the agent, what the output left out and why anything changed. [post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) decides which checkpoint tiers earn an entry.
 
@@ -79,6 +83,7 @@ Files that produce a verdict on something that already exists.
 |---|---|
 | [post-10-tribal-knowledge-signs.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-10-tribal-knowledge-signs.md) | Whether undocumented knowledge has become an operational risk |
 | [post-14-intake-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-14-intake-checklist.md) | Whether a requirement is ready to be written at all |
+| [post-74-governance-requirements-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-74-governance-requirements-checklist.md) | Whether an AI system has eight things on record as testable requirements |
 
 ### Frameworks and methods
 
@@ -109,6 +114,7 @@ Files with a fixed shape to copy and fill in. The three YAML files are structure
 | [post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) | Six requirement states, the mover and guard for each move, and what moves with a supersession |
 | [post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) | A log entry that records what a reviewer saw, checked outside the agent and changed |
 | [post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) | One accountable owner and an informed list per requirement, with the steps for changing the owner |
+| [post-76-five-analyst-prompts/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-76-five-analyst-prompts/) | Five paste-ready prompts with limits, labeled sources and a worked before and after |
 
 ### Policies and registers
 
