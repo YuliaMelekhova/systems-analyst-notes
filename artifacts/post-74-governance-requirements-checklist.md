@@ -108,8 +108,8 @@ How much risk a board is willing to accept is a judgment, and no test settles it
 
 * [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) - The checkpoint tiers that requirement 5 points at, including the kill switch condition and re-enable path
 * [artifacts/post-41-ai-agent-instruction-standard.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-41-ai-agent-instruction-standard.md) - The parameters behind the purpose statement in requirement 2
-* [artifacts/post-23-adr-template.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-23-adr-template.yaml) - Where the decision to accept a threshold or a vendor term is recorded with its rejected alternatives
-* [artifacts/post-24-changelog-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-24-changelog-template.md) - The row to fill in when a vendor change in requirement 8 forces a retest
+* [artifacts/post-46-agent-acceptance-criteria.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-46-agent-acceptance-criteria.md) - The shipping threshold, review policy and owner per task type behind requirement 6
+* [artifacts/post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) - One accountable owner per requirement and per agent, which the owner column here relies on
 
 ---
 
