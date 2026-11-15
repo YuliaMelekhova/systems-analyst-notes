@@ -128,6 +128,7 @@ The purpose is not to produce a perfect ranking - it is to surface the assumptio
 * [artifacts/post-19-unhappy-path-mapping.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-19-unhappy-path-mapping.md) - The full framework behind Step 4
 * [templates-quality-rules/readiness-rules.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/readiness-rules.md) - The gates that decide whether the discovery output can go to review
 * [artifacts/post-21-requirement-decomposition-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-21-requirement-decomposition-template.md) - What Step 2 produces once the context crosses more than one service
+* [artifacts/post-76-five-analyst-prompts/workshop-notes-to-brd.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-76-five-analyst-prompts/workshop-notes-to-brd.md) - A saved prompt that turns workshop notes into a BRD draft with every gap listed
   
 ---
 
