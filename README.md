@@ -66,6 +66,8 @@ decide when a document is ready for review.
 | 68 | Requirement Lifecycle State Machine | Phase 9 Reflection | [artifacts/post-68-requirement-lifecycle.yaml](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-68-requirement-lifecycle.yaml) |
 | 69 | Judgment Log Template | Phase 9 Reflection | [artifacts/post-69-judgment-log-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-69-judgment-log-template.md) |
 | 72 | Requirement Ownership Template | Phase 10 New Additions | [artifacts/post-72-requirement-ownership-template.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-72-requirement-ownership-template.md) |
+| 74 | Governance as Requirements Checklist | Phase 10 New Additions | [artifacts/post-74-governance-requirements-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-74-governance-requirements-checklist.md) |
+| 76 | Five Analyst Prompts | Phase 10 New Additions | [artifacts/post-76-five-analyst-prompts/](https://github.com/YuliaMelekhova/systems-analyst-notes/tree/main/artifacts/post-76-five-analyst-prompts/) |
 
 More rows get added here as `[GitHub]`-tagged posts in the series ship.
 
