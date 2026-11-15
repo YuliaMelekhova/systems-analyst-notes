@@ -109,6 +109,7 @@ The measurable signal. No measurement means no acceptance criteria, only intent 
 * [templates-quality-rules/readiness-rules.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/templates-quality-rules/readiness-rules.md) - The gates that run at review, where this checklist runs before drafting
 * [knowledge-packs/iso-20022-cbpr-plus.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/knowledge-packs/iso-20022-cbpr-plus.md) - A worked case for the jurisdiction gate, with a hard deadline attached to it
 * [artifacts/post-10-tribal-knowledge-signs.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-10-tribal-knowledge-signs.md) - Why the sign-off gate exists in the first place
+* [artifacts/post-76-five-analyst-prompts/brd-gap-analysis.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-76-five-analyst-prompts/brd-gap-analysis.md) - A saved prompt that checks a draft BRD for ambiguity before review
 
 ---
 
