@@ -115,6 +115,7 @@ An agent that answers yes to all five is ready for the kind of review a complian
 ## Related Artifacts
 
 * [artifacts/post-39-hitl-checkpoint-spec.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-39-hitl-checkpoint-spec.md) - The five-tier checkpoint structure that parameter 6 references, with the enforcing control per tier and the kill switch condition, effect, and re-enable path
+* [artifacts/post-74-governance-requirements-checklist.md](https://github.com/YuliaMelekhova/systems-analyst-notes/blob/main/artifacts/post-74-governance-requirements-checklist.md) - Requirement 2 writes the purpose statement as a test
 
 ---
 
