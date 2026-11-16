@@ -29,6 +29,7 @@ The FSB practices are nonbinding. The OCC framework is an examiner resource that
 | FCA, [Wholesale banks supervision - Insights 3 (Autumn 2026)](https://www.fca.org.uk/publications/multi-firm-reviews/wholesale-banks-supervision-insights-3-autumn-2026), multi-firm review | November 2, 2026 | Supervisory observations, including internal audit findings; distinct from the FCA and Bank of England AI survey |
 
 Requirement 7 draws on the FCA's observations about kill switch training, testing, maintenance, and authorized operators. The proposed sub-agent and queue checks extend those observations into an illustrative technical test.
+
 ---
 
 ## 2. The eight requirements
