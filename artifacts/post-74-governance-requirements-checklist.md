@@ -104,6 +104,7 @@ Requirement 7 draws on the FCA's observations about kill switch training, testin
 ## 4. What stays policy
 
 Risk appetite, accountability, and acceptable trade-offs require authorized judgment within applicable legal and regulatory constraints. Tests can show whether a control behaves as specified; they cannot decide whether the chosen level of risk is acceptable. Record the rationale, decision authority, residual risk, and review triggers. Passing this checklist does not establish regulatory compliance or remove the need for independent challenge.
+
 ---
 
 ## Related Artifacts
